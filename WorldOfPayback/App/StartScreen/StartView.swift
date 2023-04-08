@@ -33,7 +33,7 @@ struct StartView: View {
                 }
             TransactionsView(
                 titleText: Constants.transactionsItemText,
-                viewModel: TransactionsViewModelBuilder().build()
+                viewModel: TransactionsViewModelBuilder.build()
             )
                 .tabItem {
                     Label(

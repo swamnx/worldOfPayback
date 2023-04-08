@@ -9,4 +9,5 @@ import Foundation
 
 protocol ApiService {
 
+    func fetchAllTransactions() async -> Result<[TransactionModel], Error>
 }

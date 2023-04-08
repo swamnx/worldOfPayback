@@ -13,13 +13,21 @@
 		28534EF929E1A287001FDC37 /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534EF829E1A287001FDC37 /* TransactionsViewModel.swift */; };
 		28534EFC29E1A4A8001FDC37 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534EFB29E1A4A8001FDC37 /* ViewModel.swift */; };
 		28534EFE29E1A5CF001FDC37 /* TransactionsViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534EFD29E1A5CF001FDC37 /* TransactionsViewModelBuilder.swift */; };
+		28534F0029E1A927001FDC37 /* apiServiceTransactionsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 28534EFF29E1A927001FDC37 /* apiServiceTransactionsMock.json */; };
+		28534F0329E1AA27001FDC37 /* TransactionsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F0229E1AA27001FDC37 /* TransactionsDTO.swift */; };
+		28534F0529E1ABD1001FDC37 /* TransactionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F0429E1ABD1001FDC37 /* TransactionDTO.swift */; };
+		28534F0729E1ABDF001FDC37 /* TransactionDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F0629E1ABDF001FDC37 /* TransactionDetailDTO.swift */; };
+		28534F0929E1AC14001FDC37 /* TransactionAliasDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F0829E1AC14001FDC37 /* TransactionAliasDTO.swift */; };
+		28534F0B29E1AC20001FDC37 /* TransactionValueDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F0A29E1AC20001FDC37 /* TransactionValueDTO.swift */; };
+		28534F0D29E1AC94001FDC37 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F0C29E1AC94001FDC37 /* TransactionModel.swift */; };
+		28534F0F29E1AE04001FDC37 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F0E29E1AE04001FDC37 /* ApiError.swift */; };
+		28534F1229E1BA40001FDC37 /* DateServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F1129E1BA40001FDC37 /* DateServiceUtil.swift */; };
 		288CC6CF29E04A3A00FC5122 /* WorldOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6CE29E04A3A00FC5122 /* WorldOfPaybackApp.swift */; };
 		288CC6D129E04A3A00FC5122 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6D029E04A3A00FC5122 /* StartView.swift */; };
 		288CC6D329E04A3C00FC5122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288CC6D229E04A3C00FC5122 /* Assets.xcassets */; };
 		288CC6D629E04A3C00FC5122 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288CC6D529E04A3C00FC5122 /* Preview Assets.xcassets */; };
 		288CC6DF29E0507C00FC5122 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6DE29E0507C00FC5122 /* AppContext.swift */; };
 		288CC6E329E050F300FC5122 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6E229E050F300FC5122 /* ApiService.swift */; };
-		288CC6E629E0517100FC5122 /* AppContextBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6E529E0517100FC5122 /* AppContextBuilder.swift */; };
 		288CC6E829E051F300FC5122 /* MockApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6E729E051F300FC5122 /* MockApiService.swift */; };
 		288CC6FB29E05F7900FC5122 /* UIAppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6FA29E05F7900FC5122 /* UIAppConstants.swift */; };
 		288CC70129E0711900FC5122 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 288CC70329E0711900FC5122 /* Localizable.strings */; };
@@ -35,6 +43,15 @@
 		28534EF829E1A287001FDC37 /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
 		28534EFB29E1A4A8001FDC37 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		28534EFD29E1A5CF001FDC37 /* TransactionsViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModelBuilder.swift; sourceTree = "<group>"; };
+		28534EFF29E1A927001FDC37 /* apiServiceTransactionsMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = apiServiceTransactionsMock.json; sourceTree = "<group>"; };
+		28534F0229E1AA27001FDC37 /* TransactionsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsDTO.swift; sourceTree = "<group>"; };
+		28534F0429E1ABD1001FDC37 /* TransactionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDTO.swift; sourceTree = "<group>"; };
+		28534F0629E1ABDF001FDC37 /* TransactionDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailDTO.swift; sourceTree = "<group>"; };
+		28534F0829E1AC14001FDC37 /* TransactionAliasDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionAliasDTO.swift; sourceTree = "<group>"; };
+		28534F0A29E1AC20001FDC37 /* TransactionValueDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionValueDTO.swift; sourceTree = "<group>"; };
+		28534F0C29E1AC94001FDC37 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		28534F0E29E1AE04001FDC37 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		28534F1129E1BA40001FDC37 /* DateServiceUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateServiceUtil.swift; sourceTree = "<group>"; };
 		288CC6CB29E04A3A00FC5122 /* WorldOfPayback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPayback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		288CC6CE29E04A3A00FC5122 /* WorldOfPaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPaybackApp.swift; sourceTree = "<group>"; };
 		288CC6D029E04A3A00FC5122 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -42,7 +59,6 @@
 		288CC6D529E04A3C00FC5122 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		288CC6DE29E0507C00FC5122 /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		288CC6E229E050F300FC5122 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		288CC6E529E0517100FC5122 /* AppContextBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContextBuilder.swift; sourceTree = "<group>"; };
 		288CC6E729E051F300FC5122 /* MockApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiService.swift; sourceTree = "<group>"; };
 		288CC6EB29E054E300FC5122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		288CC6FA29E05F7900FC5122 /* UIAppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAppConstants.swift; sourceTree = "<group>"; };
@@ -86,6 +102,7 @@
 				28534EF629E1A0F6001FDC37 /* TransactionsView.swift */,
 				28534EF829E1A287001FDC37 /* TransactionsViewModel.swift */,
 				28534EFD29E1A5CF001FDC37 /* TransactionsViewModelBuilder.swift */,
+				28534F0C29E1AC94001FDC37 /* TransactionModel.swift */,
 			);
 			path = TransactionsScreen;
 			sourceTree = "<group>";
@@ -96,6 +113,26 @@
 				28534EFB29E1A4A8001FDC37 /* ViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		28534F0129E1AA0D001FDC37 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				28534F0229E1AA27001FDC37 /* TransactionsDTO.swift */,
+				28534F0429E1ABD1001FDC37 /* TransactionDTO.swift */,
+				28534F0629E1ABDF001FDC37 /* TransactionDetailDTO.swift */,
+				28534F0829E1AC14001FDC37 /* TransactionAliasDTO.swift */,
+				28534F0A29E1AC20001FDC37 /* TransactionValueDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		28534F1029E1BA14001FDC37 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				28534F1129E1BA40001FDC37 /* DateServiceUtil.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		288CC6C229E04A3A00FC5122 = {
@@ -157,6 +194,7 @@
 		288CC6E129E050E500FC5122 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				28534F1029E1BA14001FDC37 /* Utils */,
 				288CC6E429E0510100FC5122 /* ApiService */,
 			);
 			path = Services;
@@ -165,8 +203,11 @@
 		288CC6E429E0510100FC5122 /* ApiService */ = {
 			isa = PBXGroup;
 			children = (
+				28534F0129E1AA0D001FDC37 /* DTOs */,
+				28534EFF29E1A927001FDC37 /* apiServiceTransactionsMock.json */,
 				288CC6E229E050F300FC5122 /* ApiService.swift */,
 				288CC6E729E051F300FC5122 /* MockApiService.swift */,
+				28534F0E29E1AE04001FDC37 /* ApiError.swift */,
 			);
 			path = ApiService;
 			sourceTree = "<group>";
@@ -175,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				288CC6DE29E0507C00FC5122 /* AppContext.swift */,
-				288CC6E529E0517100FC5122 /* AppContextBuilder.swift */,
 			);
 			path = AppContext;
 			sourceTree = "<group>";
@@ -294,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28534F0029E1A927001FDC37 /* apiServiceTransactionsMock.json in Resources */,
 				288CC6D629E04A3C00FC5122 /* Preview Assets.xcassets in Resources */,
 				288CC70129E0711900FC5122 /* Localizable.strings in Resources */,
 				28534EED29E1800C001FDC37 /* Launch Screen.storyboard in Resources */,
@@ -328,20 +369,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28534F0329E1AA27001FDC37 /* TransactionsDTO.swift in Sources */,
 				288CC70B29E075AD00FC5122 /* Color+Extension.swift in Sources */,
 				288CC70D29E09DC100FC5122 /* StartFakeView.swift in Sources */,
 				288CC6E829E051F300FC5122 /* MockApiService.swift in Sources */,
 				288CC70829E0747D00FC5122 /* UnreleasedFeatureView.swift in Sources */,
+				28534F0729E1ABDF001FDC37 /* TransactionDetailDTO.swift in Sources */,
 				28534EFE29E1A5CF001FDC37 /* TransactionsViewModelBuilder.swift in Sources */,
 				288CC6D129E04A3A00FC5122 /* StartView.swift in Sources */,
 				28534EF729E1A0F6001FDC37 /* TransactionsView.swift in Sources */,
+				28534F0529E1ABD1001FDC37 /* TransactionDTO.swift in Sources */,
+				28534F0B29E1AC20001FDC37 /* TransactionValueDTO.swift in Sources */,
+				28534F1229E1BA40001FDC37 /* DateServiceUtil.swift in Sources */,
+				28534F0F29E1AE04001FDC37 /* ApiError.swift in Sources */,
 				28534EFC29E1A4A8001FDC37 /* ViewModel.swift in Sources */,
+				28534F0929E1AC14001FDC37 /* TransactionAliasDTO.swift in Sources */,
 				288CC6FB29E05F7900FC5122 /* UIAppConstants.swift in Sources */,
 				288CC6DF29E0507C00FC5122 /* AppContext.swift in Sources */,
 				28534EF929E1A287001FDC37 /* TransactionsViewModel.swift in Sources */,
 				288CC6E329E050F300FC5122 /* ApiService.swift in Sources */,
 				28534EF429E19FF4001FDC37 /* TopHeaderView.swift in Sources */,
-				288CC6E629E0517100FC5122 /* AppContextBuilder.swift in Sources */,
+				28534F0D29E1AC94001FDC37 /* TransactionModel.swift in Sources */,
 				288CC6CF29E04A3A00FC5122 /* WorldOfPaybackApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

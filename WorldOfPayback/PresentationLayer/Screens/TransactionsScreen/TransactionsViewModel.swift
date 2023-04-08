@@ -17,4 +17,9 @@ final class TransactionsViewModel: ViewModel {
         self.apiService = apiService
     }
 
+    func loadData() async {
+        let data = await self.apiService.fetchAllTransactions()
+        print(data)
+    }
+
 }

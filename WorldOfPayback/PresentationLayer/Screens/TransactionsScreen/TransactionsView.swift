@@ -29,6 +29,11 @@ struct TransactionsView: View {
                 elementPadding: Constants.elementPadding
             )
         }
+        .onAppear {
+            Task {
+                await viewModel.loadData()
+            }
+        }
     }
 }
 
@@ -42,7 +47,7 @@ struct TransactionsView_Previews: PreviewProvider {
     static var previews: some View {
         TransactionsView(
             titleText: Constants.transactionsHeaderText,
-            viewModel: TransactionsViewModelBuilder().buildMock()
+            viewModel: TransactionsViewModelBuilder.buildMock()
         )
     }
 }

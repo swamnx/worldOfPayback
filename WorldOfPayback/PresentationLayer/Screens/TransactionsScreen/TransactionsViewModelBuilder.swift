@@ -7,20 +7,19 @@
 
 import SwiftUI
 
+@MainActor
 struct TransactionsViewModelBuilder {
 
-    @EnvironmentObject private var appContext: AppContext
-
-    func build() -> TransactionsViewModel {
+    static func build() -> TransactionsViewModel {
         let transactionsViewModel = TransactionsViewModel(
-            apiService: appContext.apiService
+            apiService: AppContext.shared.apiService
         )
         return transactionsViewModel
     }
 
-    func buildMock() -> TransactionsViewModel {
+    static func buildMock() -> TransactionsViewModel {
         let transactionsViewModel = TransactionsViewModel(
-            apiService: MockApiService()
+            apiService: AppContext.sharedMock.apiService
         )
         return transactionsViewModel
 

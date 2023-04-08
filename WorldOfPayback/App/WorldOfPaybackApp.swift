@@ -17,17 +17,13 @@ struct WorldOfPaybackApp: App {
         static let tabItemSelectedColor = UIAppConstants.AppColors.defaultAccent
     }
 
-    private let appContext: AppContext
-
     var body: some Scene {
         WindowGroup {
             StartView()
-                .environmentObject(appContext)
         }
     }
 
     init() {
-        self.appContext = AppContext.build()
         setUpDefaultTabBarAppearance()
     }
 

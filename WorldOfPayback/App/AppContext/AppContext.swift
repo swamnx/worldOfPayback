@@ -7,11 +7,19 @@
 
 import Foundation
 
-final class AppContext: ObservableObject {
+final class AppContext {
+
+    static let shared = AppContext(
+        apiService: MockApiService()
+    )
+
+    static let sharedMock = AppContext(
+        apiService: MockApiService()
+    )
 
     let apiService: ApiService
 
-    init(
+    private init(
         apiService: ApiService
     ) {
         self.apiService = apiService
