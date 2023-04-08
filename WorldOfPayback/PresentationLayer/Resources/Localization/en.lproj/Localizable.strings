@@ -11,3 +11,6 @@
 "ShoppingHeadText" = "Shopping";
 "SettingsHeadText" = "Settings";
 "UnreleasedFeatureText" = "Sorry, this feature wasn't released yet";
+
+"Unknown Error" = "Something went wrong";
+"Parsing DTO Error" = "Something went wrong";

@@ -11,3 +11,6 @@
 "ShoppingHeadText" = "Покупки";
 "SettingsHeadText" = "Настройки";
 "UnreleasedFeatureText" = "Извините, данный функционал не был разработан";
+
+"Unknown Error" = "Что-то пошло не так";
+"Parsing DTO Error" = "Что-то пошло не так";
