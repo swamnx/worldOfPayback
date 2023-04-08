@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  WorldOfPayback
+
+  Created by swamnx on 7.04.23.
+  
+*/
+
+"FeedHeadText" = "Лента";
+"TransactionsHeadText" = "Транзакции";
+"ShoppingHeadText" = "Покупки";
+"SettingsHeadText" = "Настройки";
+"UnreleasedFeatureText" = "Извините, данный функционал не был разработан";

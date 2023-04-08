@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  WorldOfPayback
+
+  Created by swamnx on 7.04.23.
+  
+*/
+
+"FeedHeadText" = "Feed";
+"TransactionsHeadText" = "Transactions";
+"ShoppingHeadText" = "Shopping";
+"SettingsHeadText" = "Settings";
+"UnreleasedFeatureText" = "Sorry, this feature wasn't released yet";

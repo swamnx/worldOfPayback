@@ -7,18 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28534EED29E1800C001FDC37 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28534EEC29E1800C001FDC37 /* Launch Screen.storyboard */; };
+		28534EF429E19FF4001FDC37 /* TopHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534EF329E19FF4001FDC37 /* TopHeaderView.swift */; };
+		28534EF729E1A0F6001FDC37 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534EF629E1A0F6001FDC37 /* TransactionsView.swift */; };
+		28534EF929E1A287001FDC37 /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534EF829E1A287001FDC37 /* TransactionsViewModel.swift */; };
+		28534EFC29E1A4A8001FDC37 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534EFB29E1A4A8001FDC37 /* ViewModel.swift */; };
+		28534EFE29E1A5CF001FDC37 /* TransactionsViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534EFD29E1A5CF001FDC37 /* TransactionsViewModelBuilder.swift */; };
 		288CC6CF29E04A3A00FC5122 /* WorldOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6CE29E04A3A00FC5122 /* WorldOfPaybackApp.swift */; };
-		288CC6D129E04A3A00FC5122 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6D029E04A3A00FC5122 /* ContentView.swift */; };
+		288CC6D129E04A3A00FC5122 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6D029E04A3A00FC5122 /* StartView.swift */; };
 		288CC6D329E04A3C00FC5122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288CC6D229E04A3C00FC5122 /* Assets.xcassets */; };
 		288CC6D629E04A3C00FC5122 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288CC6D529E04A3C00FC5122 /* Preview Assets.xcassets */; };
+		288CC6DF29E0507C00FC5122 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6DE29E0507C00FC5122 /* AppContext.swift */; };
+		288CC6E329E050F300FC5122 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6E229E050F300FC5122 /* ApiService.swift */; };
+		288CC6E629E0517100FC5122 /* AppContextBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6E529E0517100FC5122 /* AppContextBuilder.swift */; };
+		288CC6E829E051F300FC5122 /* MockApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6E729E051F300FC5122 /* MockApiService.swift */; };
+		288CC6FB29E05F7900FC5122 /* UIAppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6FA29E05F7900FC5122 /* UIAppConstants.swift */; };
+		288CC70129E0711900FC5122 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 288CC70329E0711900FC5122 /* Localizable.strings */; };
+		288CC70829E0747D00FC5122 /* UnreleasedFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC70729E0747D00FC5122 /* UnreleasedFeatureView.swift */; };
+		288CC70B29E075AD00FC5122 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC70A29E075AD00FC5122 /* Color+Extension.swift */; };
+		288CC70D29E09DC100FC5122 /* StartFakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC70C29E09DC100FC5122 /* StartFakeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28534EEC29E1800C001FDC37 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		28534EF329E19FF4001FDC37 /* TopHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeaderView.swift; sourceTree = "<group>"; };
+		28534EF629E1A0F6001FDC37 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		28534EF829E1A287001FDC37 /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
+		28534EFB29E1A4A8001FDC37 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		28534EFD29E1A5CF001FDC37 /* TransactionsViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModelBuilder.swift; sourceTree = "<group>"; };
 		288CC6CB29E04A3A00FC5122 /* WorldOfPayback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPayback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		288CC6CE29E04A3A00FC5122 /* WorldOfPaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPaybackApp.swift; sourceTree = "<group>"; };
-		288CC6D029E04A3A00FC5122 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		288CC6D029E04A3A00FC5122 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		288CC6D229E04A3C00FC5122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		288CC6D529E04A3C00FC5122 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		288CC6DE29E0507C00FC5122 /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
+		288CC6E229E050F300FC5122 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		288CC6E529E0517100FC5122 /* AppContextBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContextBuilder.swift; sourceTree = "<group>"; };
+		288CC6E729E051F300FC5122 /* MockApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiService.swift; sourceTree = "<group>"; };
+		288CC6EB29E054E300FC5122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		288CC6FA29E05F7900FC5122 /* UIAppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAppConstants.swift; sourceTree = "<group>"; };
+		288CC70229E0711900FC5122 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		288CC70529E0714300FC5122 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		288CC70729E0747D00FC5122 /* UnreleasedFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnreleasedFeatureView.swift; sourceTree = "<group>"; };
+		288CC70A29E075AD00FC5122 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		288CC70C29E09DC100FC5122 /* StartFakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFakeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +64,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28534EEB29E17FFD001FDC37 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				28534EEC29E1800C001FDC37 /* Launch Screen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		28534EF229E19F5F001FDC37 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				28534EF529E1A0E1001FDC37 /* TransactionsScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		28534EF529E1A0E1001FDC37 /* TransactionsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				28534EF629E1A0F6001FDC37 /* TransactionsView.swift */,
+				28534EF829E1A287001FDC37 /* TransactionsViewModel.swift */,
+				28534EFD29E1A5CF001FDC37 /* TransactionsViewModelBuilder.swift */,
+			);
+			path = TransactionsScreen;
+			sourceTree = "<group>";
+		};
+		28534EFA29E1A49E001FDC37 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				28534EFB29E1A4A8001FDC37 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		288CC6C229E04A3A00FC5122 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +117,10 @@
 		288CC6CD29E04A3A00FC5122 /* WorldOfPayback */ = {
 			isa = PBXGroup;
 			children = (
-				288CC6CE29E04A3A00FC5122 /* WorldOfPaybackApp.swift */,
-				288CC6D029E04A3A00FC5122 /* ContentView.swift */,
+				288CC6EB29E054E300FC5122 /* Info.plist */,
+				288CC6F829E05F4900FC5122 /* PresentationLayer */,
+				288CC6E029E050D200FC5122 /* ApplicationLayer */,
+				288CC6DC29E04FAA00FC5122 /* App */,
 				288CC6D229E04A3C00FC5122 /* Assets.xcassets */,
 				288CC6D429E04A3C00FC5122 /* Preview Content */,
 			);
@@ -67,6 +135,106 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		288CC6DC29E04FAA00FC5122 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				28534EEB29E17FFD001FDC37 /* LaunchScreen */,
+				288CC6EA29E053B500FC5122 /* StartScreen */,
+				288CC6E929E0537700FC5122 /* AppContext */,
+				288CC6CE29E04A3A00FC5122 /* WorldOfPaybackApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		288CC6E029E050D200FC5122 /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				288CC6E129E050E500FC5122 /* Services */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		288CC6E129E050E500FC5122 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				288CC6E429E0510100FC5122 /* ApiService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		288CC6E429E0510100FC5122 /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				288CC6E229E050F300FC5122 /* ApiService.swift */,
+				288CC6E729E051F300FC5122 /* MockApiService.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		288CC6E929E0537700FC5122 /* AppContext */ = {
+			isa = PBXGroup;
+			children = (
+				288CC6DE29E0507C00FC5122 /* AppContext.swift */,
+				288CC6E529E0517100FC5122 /* AppContextBuilder.swift */,
+			);
+			path = AppContext;
+			sourceTree = "<group>";
+		};
+		288CC6EA29E053B500FC5122 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				288CC6D029E04A3A00FC5122 /* StartView.swift */,
+				288CC70C29E09DC100FC5122 /* StartFakeView.swift */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
+		288CC6F829E05F4900FC5122 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				28534EFA29E1A49E001FDC37 /* ViewModel */,
+				28534EF229E19F5F001FDC37 /* Screens */,
+				288CC70929E0758400FC5122 /* Extensions */,
+				288CC70629E0743100FC5122 /* Views */,
+				288CC6F929E05F6C00FC5122 /* Resources */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		288CC6F929E05F6C00FC5122 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				288CC6FE29E06EC500FC5122 /* Localization */,
+				288CC6FA29E05F7900FC5122 /* UIAppConstants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		288CC6FE29E06EC500FC5122 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				288CC70329E0711900FC5122 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		288CC70629E0743100FC5122 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				288CC70729E0747D00FC5122 /* UnreleasedFeatureView.swift */,
+				28534EF329E19FF4001FDC37 /* TopHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		288CC70929E0758400FC5122 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				288CC70A29E075AD00FC5122 /* Color+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -75,6 +243,7 @@
 			buildConfigurationList = 288CC6D929E04A3C00FC5122 /* Build configuration list for PBXNativeTarget "WorldOfPayback" */;
 			buildPhases = (
 				288CC6C729E04A3A00FC5122 /* Sources */,
+				288CC6DD29E04FED00FC5122 /* ShellScript */,
 				288CC6C829E04A3A00FC5122 /* Frameworks */,
 				288CC6C929E04A3A00FC5122 /* Resources */,
 			);
@@ -108,7 +277,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				ru,
 			);
 			mainGroup = 288CC6C229E04A3A00FC5122;
 			productRefGroup = 288CC6CC29E04A3A00FC5122 /* Products */;
@@ -126,23 +295,70 @@
 			buildActionMask = 2147483647;
 			files = (
 				288CC6D629E04A3C00FC5122 /* Preview Assets.xcassets in Resources */,
+				288CC70129E0711900FC5122 /* Localizable.strings in Resources */,
+				28534EED29E1800C001FDC37 /* Launch Screen.storyboard in Resources */,
 				288CC6D329E04A3C00FC5122 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		288CC6DD29E04FED00FC5122 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		288CC6C729E04A3A00FC5122 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				288CC6D129E04A3A00FC5122 /* ContentView.swift in Sources */,
+				288CC70B29E075AD00FC5122 /* Color+Extension.swift in Sources */,
+				288CC70D29E09DC100FC5122 /* StartFakeView.swift in Sources */,
+				288CC6E829E051F300FC5122 /* MockApiService.swift in Sources */,
+				288CC70829E0747D00FC5122 /* UnreleasedFeatureView.swift in Sources */,
+				28534EFE29E1A5CF001FDC37 /* TransactionsViewModelBuilder.swift in Sources */,
+				288CC6D129E04A3A00FC5122 /* StartView.swift in Sources */,
+				28534EF729E1A0F6001FDC37 /* TransactionsView.swift in Sources */,
+				28534EFC29E1A4A8001FDC37 /* ViewModel.swift in Sources */,
+				288CC6FB29E05F7900FC5122 /* UIAppConstants.swift in Sources */,
+				288CC6DF29E0507C00FC5122 /* AppContext.swift in Sources */,
+				28534EF929E1A287001FDC37 /* TransactionsViewModel.swift in Sources */,
+				288CC6E329E050F300FC5122 /* ApiService.swift in Sources */,
+				28534EF429E19FF4001FDC37 /* TopHeaderView.swift in Sources */,
+				288CC6E629E0517100FC5122 /* AppContextBuilder.swift in Sources */,
 				288CC6CF29E04A3A00FC5122 /* WorldOfPaybackApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		288CC70329E0711900FC5122 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				288CC70229E0711900FC5122 /* en */,
+				288CC70529E0714300FC5122 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		288CC6D729E04A3C00FC5122 /* Debug */ = {
@@ -269,9 +485,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WorldOfPayback/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = WorldOfPayback/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "WOP!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -297,9 +514,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WorldOfPayback/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = WorldOfPayback/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "WOP!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -1,0 +1,58 @@
+# By default, SwiftLint uses a set of sensible default rules you can adjust:
+disabled_rules: # rule identifiers turned on by default to exclude from running
+  - trailing_whitespace 
+  - cyclomatic_complexity
+  - inclusive_language  
+  - identifier_name
+
+opt_in_rules: # some rules are turned off by default, so you need to opt-in
+  - array_init
+  - anyobject_protocol
+  - closure_end_indentation
+  - closure_spacing
+  - collection_alignment
+  - discouraged_object_literal
+  - expiring_todo
+  - lower_acl_than_parent
+  - modifier_order
+  - operator_usage_whitespace
+  - toggle_bool
+  - type_contents_order
+  - unneeded_parentheses_in_closure_argument
+  - unused_import 
+  - yoda_condition
+  - fatal_error_message
+  - identical_operands
+  - force_unwrapping
+
+# Alternatively, specify all rules explicitly by uncommenting this option:
+# only_rules: # delete `disabled_rules` & `opt_in_rules` if using this
+#   - empty_parameters
+#   - vertical_whitespace
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  - build
+  - gems
+  - docs
+  - fastlane
+  - scripts
+
+force_cast: warning # implicitly
+force_try: warning
+
+line_length:
+  warning: 150
+  error: 200
+function_body_length:
+  warning: 50
+  error: 100
+type_body_length:
+  warning: 400
+nesting:
+  type_level:
+    warning: 2
+    error: 3
+
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, codeclimate, junit, html, emoji, sonarqube, markdown, github-actions-logging)
