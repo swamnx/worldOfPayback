@@ -27,6 +27,9 @@
 		28534F1929E1C7CF001FDC37 /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F1829E1C7CF001FDC37 /* RoundedCornersShape.swift */; };
 		28534F1C29E1F5E6001FDC37 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F1B29E1F5E6001FDC37 /* TransactionListViewModel.swift */; };
 		28534F1E29E1F73E001FDC37 /* TransactionListViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F1D29E1F73E001FDC37 /* TransactionListViewModelBuilder.swift */; };
+		288BC0C629E32370009F5A39 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288BC0C529E32370009F5A39 /* ActivityIndicator.swift */; };
+		288BC0C829E33C3C009F5A39 /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288BC0C729E33C3C009F5A39 /* ViewDidLoadModifier.swift */; };
+		288BC0CA29E33C5F009F5A39 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288BC0C929E33C5F009F5A39 /* View+Extension.swift */; };
 		288CC6CF29E04A3A00FC5122 /* WorldOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6CE29E04A3A00FC5122 /* WorldOfPaybackApp.swift */; };
 		288CC6D129E04A3A00FC5122 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6D029E04A3A00FC5122 /* StartView.swift */; };
 		288CC6D329E04A3C00FC5122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288CC6D229E04A3C00FC5122 /* Assets.xcassets */; };
@@ -65,6 +68,9 @@
 		28534F1829E1C7CF001FDC37 /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 		28534F1B29E1F5E6001FDC37 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
 		28534F1D29E1F73E001FDC37 /* TransactionListViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModelBuilder.swift; sourceTree = "<group>"; };
+		288BC0C529E32370009F5A39 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		288BC0C729E33C3C009F5A39 /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
+		288BC0C929E33C5F009F5A39 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		288CC6CB29E04A3A00FC5122 /* WorldOfPayback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPayback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		288CC6CE29E04A3A00FC5122 /* WorldOfPaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPaybackApp.swift; sourceTree = "<group>"; };
 		288CC6D029E04A3A00FC5122 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -156,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				28534F1629E1C00E001FDC37 /* DatePresentationUtil.swift */,
+				288BC0C729E33C3C009F5A39 /* ViewDidLoadModifier.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -301,6 +308,7 @@
 				288CC70729E0747D00FC5122 /* UnreleasedFeatureView.swift */,
 				28534EF329E19FF4001FDC37 /* TopHeaderView.swift */,
 				28534F1829E1C7CF001FDC37 /* RoundedCornersShape.swift */,
+				288BC0C529E32370009F5A39 /* ActivityIndicator.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				288CC70A29E075AD00FC5122 /* Color+Extension.swift */,
+				288BC0C929E33C5F009F5A39 /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -424,6 +433,7 @@
 				288CC70B29E075AD00FC5122 /* Color+Extension.swift in Sources */,
 				288CC70D29E09DC100FC5122 /* StartFakeView.swift in Sources */,
 				288F827729E2F3AC0072B015 /* TransactionView.swift in Sources */,
+				288BC0CA29E33C5F009F5A39 /* View+Extension.swift in Sources */,
 				288CC6E829E051F300FC5122 /* MockApiService.swift in Sources */,
 				288CC70829E0747D00FC5122 /* UnreleasedFeatureView.swift in Sources */,
 				28534F0729E1ABDF001FDC37 /* TransactionDetailDTO.swift in Sources */,
@@ -432,6 +442,7 @@
 				28534F1429E1BF6A001FDC37 /* TransactionListView.swift in Sources */,
 				28534EF729E1A0F6001FDC37 /* TransactionsView.swift in Sources */,
 				28534F0529E1ABD1001FDC37 /* TransactionDTO.swift in Sources */,
+				288BC0C829E33C3C009F5A39 /* ViewDidLoadModifier.swift in Sources */,
 				28534F0B29E1AC20001FDC37 /* TransactionValueDTO.swift in Sources */,
 				28534F1229E1BA40001FDC37 /* DateServiceUtil.swift in Sources */,
 				28534F1729E1C00E001FDC37 /* DatePresentationUtil.swift in Sources */,
@@ -446,6 +457,7 @@
 				28534EF429E19FF4001FDC37 /* TopHeaderView.swift in Sources */,
 				28534F1929E1C7CF001FDC37 /* RoundedCornersShape.swift in Sources */,
 				28534F0D29E1AC94001FDC37 /* TransactionModel.swift in Sources */,
+				288BC0C629E32370009F5A39 /* ActivityIndicator.swift in Sources */,
 				288CC6CF29E04A3A00FC5122 /* WorldOfPaybackApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

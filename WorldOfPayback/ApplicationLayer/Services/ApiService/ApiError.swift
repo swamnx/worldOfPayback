@@ -11,6 +11,7 @@ public enum ApiError: Error {
 
     case unknownError
     case parsingDTOError
+    case mockError
 }
 
 extension ApiError: LocalizedError {
@@ -21,6 +22,8 @@ extension ApiError: LocalizedError {
             return String(localized: "Unknown Error")
         case .parsingDTOError:
             return String(localized: "Parsing DTO Error")
+        case .mockError:
+            return String(localized: "Mock Error")
         }
     }
 }

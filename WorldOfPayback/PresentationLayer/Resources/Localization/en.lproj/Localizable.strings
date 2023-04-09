@@ -14,6 +14,10 @@
 
 "Unknown Error" = "Something went wrong";
 "Parsing DTO Error" = "Something went wrong";
+"Mock Error" = "Mock Error";
+
 "Transaction details" = "Transaction details";
 "Partner Name:" = "Partner Name";
 "Description:" = "Description";
+"Close" = "Close";
+"No data" = "No data";

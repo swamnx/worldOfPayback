@@ -14,6 +14,10 @@
 
 "Unknown Error" = "Что-то пошло не так";
 "Parsing DTO Error" = "Что-то пошло не так";
+"Mock Error" = "Ошибка мока";
+
 "Transaction details" = "Детали транзакции";
 "Partner Name:" = "Имя партнера:";
 "Description:" = "Описание:";
+"Close" = "Закрыть";
+"No data" = "Нет данных";

@@ -10,6 +10,11 @@ import Foundation
 struct MockApiService: ApiService {
 
     func fetchAllTransactions() async -> Result<[TransactionModel], Error> {
+        try! await Task.sleep(for: .seconds(1))
+
+        if Bool.random() {
+            return .failure(ApiError.mockError)
+        }
 
         guard let path = Bundle.main.path(
             forResource: "apiServiceTransactionsMock",
