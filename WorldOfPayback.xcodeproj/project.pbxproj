@@ -30,6 +30,7 @@
 		288BC0C629E32370009F5A39 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288BC0C529E32370009F5A39 /* ActivityIndicator.swift */; };
 		288BC0C829E33C3C009F5A39 /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288BC0C729E33C3C009F5A39 /* ViewDidLoadModifier.swift */; };
 		288BC0CA29E33C5F009F5A39 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288BC0C929E33C5F009F5A39 /* View+Extension.swift */; };
+		288BC0CC29E341F2009F5A39 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288BC0CB29E341F2009F5A39 /* NetworkMonitor.swift */; };
 		288CC6CF29E04A3A00FC5122 /* WorldOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6CE29E04A3A00FC5122 /* WorldOfPaybackApp.swift */; };
 		288CC6D129E04A3A00FC5122 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6D029E04A3A00FC5122 /* StartView.swift */; };
 		288CC6D329E04A3C00FC5122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288CC6D229E04A3C00FC5122 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		288BC0C529E32370009F5A39 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		288BC0C729E33C3C009F5A39 /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
 		288BC0C929E33C5F009F5A39 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		288BC0CB29E341F2009F5A39 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		288CC6CB29E04A3A00FC5122 /* WorldOfPayback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPayback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		288CC6CE29E04A3A00FC5122 /* WorldOfPaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPaybackApp.swift; sourceTree = "<group>"; };
 		288CC6D029E04A3A00FC5122 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				28534F1129E1BA40001FDC37 /* DateServiceUtil.swift */,
+				288BC0CB29E341F2009F5A39 /* NetworkMonitor.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				28534EFC29E1A4A8001FDC37 /* ViewModel.swift in Sources */,
 				28534F0929E1AC14001FDC37 /* TransactionAliasDTO.swift in Sources */,
 				288CC6FB29E05F7900FC5122 /* UIAppConstants.swift in Sources */,
+				288BC0CC29E341F2009F5A39 /* NetworkMonitor.swift in Sources */,
 				288CC6DF29E0507C00FC5122 /* AppContext.swift in Sources */,
 				28534EF929E1A287001FDC37 /* TransactionsViewModel.swift in Sources */,
 				288CC6E329E050F300FC5122 /* ApiService.swift in Sources */,
@@ -596,9 +600,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorldOfPayback/Preview Content\"";
+				DEVELOPMENT_TEAM = 6762K7P32G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WorldOfPayback/Info.plist;
@@ -614,6 +620,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nothing.WorldOfPayback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -625,9 +632,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorldOfPayback/Preview Content\"";
+				DEVELOPMENT_TEAM = 6762K7P32G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WorldOfPayback/Info.plist;
@@ -643,6 +652,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nothing.WorldOfPayback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

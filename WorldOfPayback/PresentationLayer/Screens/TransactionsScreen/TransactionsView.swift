@@ -12,15 +12,19 @@ struct TransactionsView: View {
     private enum Constants {
         static let mainColor = UIAppConstants.AppColors.defaultBasic
         static let mainBackgroundColor = UIAppConstants.AppColors.defaultBackground
+        static let mainAdvancedColor = UIAppConstants.AppColors.defaultAdvanced
         static let titlePadding: CGFloat = 30
         static let elementPadding: CGFloat = 15
         static let defaultErrorButtonText = String(localized: "Close")
         static let iconNoData = UIAppConstants.AppColors.iconNoData
+        static let noDataText = String(localized: "No data")
+        static let noNetworkText = String(localized: "No network")
     }
 
     let titleText: String
 
     @StateObject var viewModel: TransactionsViewModel
+    @EnvironmentObject var networkMonitor: NetworkMonitor
 
     var body: some View {
         Group {
@@ -51,20 +55,27 @@ struct TransactionsView: View {
                     }
                 }
                 .refreshable {
-                    Task {
-                        await viewModel.loadData()
+                    if networkMonitor.isConnected {
+                        Task {
+                            await viewModel.loadData()
+                        }
                     }
                 }
-                
+
                 if viewModel.isLoading {
                     loaderView()
                 }
             }
             .safeAreaInset(edge: .top) {
-                TopHeaderView(
-                    titleText: titleText,
-                    elementPadding: Constants.titlePadding
-                )
+                VStack(spacing: 0) {
+                    TopHeaderView(
+                        titleText: titleText,
+                        elementPadding: Constants.titlePadding
+                    )
+                    if !networkMonitor.isConnected {
+                        noNetworkView()
+                    }
+                }
             }
         }
         .background(Constants.mainBackgroundColor)
@@ -89,7 +100,7 @@ struct TransactionsView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 200, height: 200)
-            Text("No data")
+            Text(Constants.noDataText)
                 .font(.title)
                 .foregroundColor(Constants.mainColor)
         }
@@ -101,6 +112,14 @@ struct TransactionsView: View {
             .frame(width: 150, height: 150)
             .clipShape(RoundedRectangle(cornerRadius: 30))
     }
+
+    func noNetworkView() -> some View {
+        Text(Constants.noNetworkText)
+            .font(.title3)
+            .foregroundColor(Constants.mainColor)
+            .frame(maxWidth: .infinity, maxHeight: 40, alignment: .center)
+            .background(Constants.mainAdvancedColor)
+    }
 }
 
 struct TransactionsView_Previews: PreviewProvider {
@@ -111,9 +130,12 @@ struct TransactionsView_Previews: PreviewProvider {
     }
 
     static var previews: some View {
+
         TransactionsView(
             titleText: Constants.transactionsHeaderText,
             viewModel: TransactionsViewModelBuilder.buildMock()
         )
+        .environmentObject(NetworkMonitor())
+        
     }
 }

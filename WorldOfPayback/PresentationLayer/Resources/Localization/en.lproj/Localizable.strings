@@ -17,7 +17,8 @@
 "Mock Error" = "Mock Error";
 
 "Transaction details" = "Transaction details";
-"Partner Name:" = "Partner Name";
-"Description:" = "Description";
+"Partner Name:" = "Partner Name:";
+"Description:" = "Description:";
 "Close" = "Close";
 "No data" = "No data";
+"No network" = "No network";

@@ -17,9 +17,12 @@ struct WorldOfPaybackApp: App {
         static let tabItemSelectedColor = UIAppConstants.AppColors.defaultAccent
     }
 
+    @StateObject var networkMonitor: NetworkMonitor = NetworkMonitor()
+
     var body: some Scene {
         WindowGroup {
             StartView()
+                .environmentObject(networkMonitor)
         }
     }
 
