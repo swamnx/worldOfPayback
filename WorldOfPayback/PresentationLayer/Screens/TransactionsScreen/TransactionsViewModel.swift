@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
 
-final class TransactionsViewModel: ViewModel {
+class TransactionsViewModel: ViewModel {
+
+    @Published var filteredTransactions: [TransactionModel] = []
 
     private let apiService: ApiService
 
@@ -18,8 +21,13 @@ final class TransactionsViewModel: ViewModel {
     }
 
     func loadData() async {
-        let data = await self.apiService.fetchAllTransactions()
-        print(data)
+        let response = await self.apiService.fetchAllTransactions()
+        switch response {
+        case let .success(data):
+            self.filteredTransactions = data
+        case let.failure(error):
+            print("some error")
+        }
     }
 
 }

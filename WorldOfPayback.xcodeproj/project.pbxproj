@@ -22,6 +22,11 @@
 		28534F0D29E1AC94001FDC37 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F0C29E1AC94001FDC37 /* TransactionModel.swift */; };
 		28534F0F29E1AE04001FDC37 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F0E29E1AE04001FDC37 /* ApiError.swift */; };
 		28534F1229E1BA40001FDC37 /* DateServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F1129E1BA40001FDC37 /* DateServiceUtil.swift */; };
+		28534F1429E1BF6A001FDC37 /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F1329E1BF6A001FDC37 /* TransactionListView.swift */; };
+		28534F1729E1C00E001FDC37 /* DatePresentationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F1629E1C00E001FDC37 /* DatePresentationUtil.swift */; };
+		28534F1929E1C7CF001FDC37 /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F1829E1C7CF001FDC37 /* RoundedCornersShape.swift */; };
+		28534F1C29E1F5E6001FDC37 /* TransactionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F1B29E1F5E6001FDC37 /* TransactionListViewModel.swift */; };
+		28534F1E29E1F73E001FDC37 /* TransactionListViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28534F1D29E1F73E001FDC37 /* TransactionListViewModelBuilder.swift */; };
 		288CC6CF29E04A3A00FC5122 /* WorldOfPaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6CE29E04A3A00FC5122 /* WorldOfPaybackApp.swift */; };
 		288CC6D129E04A3A00FC5122 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC6D029E04A3A00FC5122 /* StartView.swift */; };
 		288CC6D329E04A3C00FC5122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288CC6D229E04A3C00FC5122 /* Assets.xcassets */; };
@@ -52,6 +57,11 @@
 		28534F0C29E1AC94001FDC37 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		28534F0E29E1AE04001FDC37 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		28534F1129E1BA40001FDC37 /* DateServiceUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateServiceUtil.swift; sourceTree = "<group>"; };
+		28534F1329E1BF6A001FDC37 /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
+		28534F1629E1C00E001FDC37 /* DatePresentationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePresentationUtil.swift; sourceTree = "<group>"; };
+		28534F1829E1C7CF001FDC37 /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
+		28534F1B29E1F5E6001FDC37 /* TransactionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModel.swift; sourceTree = "<group>"; };
+		28534F1D29E1F73E001FDC37 /* TransactionListViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewModelBuilder.swift; sourceTree = "<group>"; };
 		288CC6CB29E04A3A00FC5122 /* WorldOfPayback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPayback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		288CC6CE29E04A3A00FC5122 /* WorldOfPaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPaybackApp.swift; sourceTree = "<group>"; };
 		288CC6D029E04A3A00FC5122 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -133,6 +143,24 @@
 				28534F1129E1BA40001FDC37 /* DateServiceUtil.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		28534F1529E1BFEE001FDC37 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				28534F1629E1C00E001FDC37 /* DatePresentationUtil.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		28534F1A29E1F5C9001FDC37 /* TransactionListView */ = {
+			isa = PBXGroup;
+			children = (
+				28534F1329E1BF6A001FDC37 /* TransactionListView.swift */,
+				28534F1B29E1F5E6001FDC37 /* TransactionListViewModel.swift */,
+				28534F1D29E1F73E001FDC37 /* TransactionListViewModelBuilder.swift */,
+			);
+			path = TransactionListView;
 			sourceTree = "<group>";
 		};
 		288CC6C229E04A3A00FC5122 = {
@@ -232,6 +260,7 @@
 		288CC6F829E05F4900FC5122 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				28534F1529E1BFEE001FDC37 /* Utils */,
 				28534EFA29E1A49E001FDC37 /* ViewModel */,
 				28534EF229E19F5F001FDC37 /* Screens */,
 				288CC70929E0758400FC5122 /* Extensions */,
@@ -261,8 +290,10 @@
 		288CC70629E0743100FC5122 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				28534F1A29E1F5C9001FDC37 /* TransactionListView */,
 				288CC70729E0747D00FC5122 /* UnreleasedFeatureView.swift */,
 				28534EF329E19FF4001FDC37 /* TopHeaderView.swift */,
+				28534F1829E1C7CF001FDC37 /* RoundedCornersShape.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -369,7 +400,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28534F1E29E1F73E001FDC37 /* TransactionListViewModelBuilder.swift in Sources */,
 				28534F0329E1AA27001FDC37 /* TransactionsDTO.swift in Sources */,
+				28534F1C29E1F5E6001FDC37 /* TransactionListViewModel.swift in Sources */,
 				288CC70B29E075AD00FC5122 /* Color+Extension.swift in Sources */,
 				288CC70D29E09DC100FC5122 /* StartFakeView.swift in Sources */,
 				288CC6E829E051F300FC5122 /* MockApiService.swift in Sources */,
@@ -377,10 +410,12 @@
 				28534F0729E1ABDF001FDC37 /* TransactionDetailDTO.swift in Sources */,
 				28534EFE29E1A5CF001FDC37 /* TransactionsViewModelBuilder.swift in Sources */,
 				288CC6D129E04A3A00FC5122 /* StartView.swift in Sources */,
+				28534F1429E1BF6A001FDC37 /* TransactionListView.swift in Sources */,
 				28534EF729E1A0F6001FDC37 /* TransactionsView.swift in Sources */,
 				28534F0529E1ABD1001FDC37 /* TransactionDTO.swift in Sources */,
 				28534F0B29E1AC20001FDC37 /* TransactionValueDTO.swift in Sources */,
 				28534F1229E1BA40001FDC37 /* DateServiceUtil.swift in Sources */,
+				28534F1729E1C00E001FDC37 /* DatePresentationUtil.swift in Sources */,
 				28534F0F29E1AE04001FDC37 /* ApiError.swift in Sources */,
 				28534EFC29E1A4A8001FDC37 /* ViewModel.swift in Sources */,
 				28534F0929E1AC14001FDC37 /* TransactionAliasDTO.swift in Sources */,
@@ -389,6 +424,7 @@
 				28534EF929E1A287001FDC37 /* TransactionsViewModel.swift in Sources */,
 				288CC6E329E050F300FC5122 /* ApiService.swift in Sources */,
 				28534EF429E19FF4001FDC37 /* TopHeaderView.swift in Sources */,
+				28534F1929E1C7CF001FDC37 /* RoundedCornersShape.swift in Sources */,
 				28534F0D29E1AC94001FDC37 /* TransactionModel.swift in Sources */,
 				288CC6CF29E04A3A00FC5122 /* WorldOfPaybackApp.swift in Sources */,
 			);

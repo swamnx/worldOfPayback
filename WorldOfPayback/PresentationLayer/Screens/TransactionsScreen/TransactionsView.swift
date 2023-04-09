@@ -12,7 +12,8 @@ struct TransactionsView: View {
     private enum Constants {
         static let mainColor = UIAppConstants.AppColors.defaultBasic
         static let mainBackgroundColor = UIAppConstants.AppColors.defaultBackground
-        static let elementPadding: CGFloat = 30
+        static let titlePadding: CGFloat = 30
+        static let elementPadding: CGFloat = 15
     }
 
     let titleText: String
@@ -21,12 +22,21 @@ struct TransactionsView: View {
 
     var body: some View {
         ScrollView(.vertical) {
+            VStack {
+                Spacer(minLength: Constants.elementPadding)
+                ForEach(viewModel.filteredTransactions) { transation in
+                    TransactionListView(
+                        viewModel: TransactionListViewModelBuilder.build(model: transation)
+                    )
+                }
+                Spacer(minLength: Constants.elementPadding)
+            }
         }
         .background(Constants.mainBackgroundColor)
         .safeAreaInset(edge: .top) {
             TopHeaderView(
                 titleText: titleText,
-                elementPadding: Constants.elementPadding
+                elementPadding: Constants.titlePadding
             )
         }
         .onAppear {

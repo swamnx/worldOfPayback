@@ -15,48 +15,52 @@ struct UnreleasedFeatureView: View {
         static let mainShadowColor = UIAppConstants.AppColors.defaultShadow
         static let gradientColorPart1 = UIAppConstants.AppColors.gradientUnreleasedPart1
         static let gradientColorPart2 = UIAppConstants.AppColors.gradientUnreleasedPart2
-        static let shadowRadius: CGFloat = 10
-        static let elementRoundRadius: CGFloat = 30
+
         static let elementPadding: CGFloat = 25
-        static let elementSystemIconName = "exclamationmark.triangle"
-        static let elementText = String(localized: "UnreleasedFeatureText")
+
+        static let cardShadowRadius: CGFloat = 5
+        static let cardBorderWidth: CGFloat = 10
+        static let cardRoundRadius: CGFloat = 30
+        static let cardPadding: CGFloat = 15
+        static let cardSize: CGSize = .init(width: 430, height: 300)
+
+        static let textRoundRadius: CGFloat = 30
+        static let textHeight: CGFloat = 90
+        static let text = String(localized: "UnreleasedFeatureText")
+
+        static let systemIconName = "exclamationmark.triangle"
+        static let iconSize: CGSize = .init(width: 150, height: 150)
 
     }
 
     var body: some View {
-        Group {
+        ZStack {
+            cardView()
             VStack {
                 Spacer()
-
-                Image(systemName: Constants.elementSystemIconName)
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundColor(Constants.mainColor)
-                    .padding(Constants.elementPadding)
-                    .background(Constants.mainBackgroundColor)
-                    .clipShape(Circle())
-                    .frame(maxWidth: 150, maxHeight: 150)
-
+                iconView()
                 Spacer()
-
-                Text(Constants.elementText)
-                    .multilineTextAlignment(.center)
-                    .font(.subheadline)
-                    .foregroundColor(Constants.mainColor)
-                    .padding(Constants.elementPadding)
-                    .background(Constants.mainBackgroundColor)
-                    .clipShape(
-                        RoundedRectangle(
-                            cornerRadius: Constants.elementRoundRadius,
-                            style: .continuous
-                        )
-                    )
-                    .frame(maxHeight: 90)
-
+                textView()
                 Spacer()
             }
+
         }
-        .frame(maxWidth: 430, maxHeight: 300)
+        .frame(
+            maxWidth: Constants.cardSize.width,
+            maxHeight: Constants.cardSize.height
+        )
+        .padding(Constants.cardPadding)
+    }
+
+    func cardView() -> some View {
+        RoundedRectangle(
+            cornerRadius: Constants.cardRoundRadius,
+            style: .continuous
+        )
+        .stroke(
+            Constants.mainColor,
+            lineWidth: Constants.cardBorderWidth
+        )
         .background(
             LinearGradient(
                 gradient:
@@ -72,14 +76,46 @@ struct UnreleasedFeatureView: View {
         )
         .clipShape(
             RoundedRectangle(
-                cornerRadius: Constants.elementRoundRadius,
+                cornerRadius: Constants.cardRoundRadius,
                 style: .continuous
             )
         )
         .shadow(
             color: Constants.mainShadowColor,
-            radius: Constants.shadowRadius
+            radius: Constants.cardShadowRadius
         )
+    }
+
+    func iconView() -> some View {
+        Image(systemName: Constants.systemIconName)
+            .resizable()
+            .scaledToFit()
+            .foregroundColor(Constants.mainColor)
+            .padding(Constants.elementPadding)
+            .background(Constants.mainBackgroundColor)
+            .clipShape(Circle())
+            .frame(
+                width: Constants.iconSize.width,
+                height: Constants.iconSize.height
+            )
+
+    }
+
+    func textView() -> some View {
+        Text(Constants.text)
+            .font(.subheadline)
+            .foregroundColor(Constants.mainColor)
+            .padding(Constants.elementPadding)
+            .background(Constants.mainBackgroundColor)
+            .clipShape(
+                RoundedRectangle(
+                    cornerRadius: Constants.textRoundRadius,
+                    style: .continuous
+                )
+            )
+            .frame(
+                maxHeight: Constants.textHeight
+            )
     }
 }
 

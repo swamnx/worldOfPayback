@@ -14,23 +14,25 @@ struct StartFakeView: View {
         static let mainBackgroundColor = UIAppConstants.AppColors.defaultBackground
         static let mainAccentColor = UIAppConstants.AppColors.defaultAccent
         static let mainShadowColor = UIAppConstants.AppColors.defaultShadow
-        static let elementPadding: CGFloat = 30
+        static let titlePadding: CGFloat = 30
+        static let elementPadding: CGFloat = 15
     }
 
     let titleText: String
 
     var body: some View {
         ScrollView(.vertical) {
-            Spacer()
-            UnreleasedFeatureView()
-                .padding(Constants.elementPadding)
-            Spacer()
+            VStack {
+                Spacer(minLength: Constants.elementPadding)
+                UnreleasedFeatureView()
+                Spacer(minLength: Constants.elementPadding)
+            }
         }
         .background(Constants.mainBackgroundColor)
         .safeAreaInset(edge: .top) {
             TopHeaderView(
                 titleText: titleText,
-                elementPadding: Constants.elementPadding
+                elementPadding: Constants.titlePadding
             )
         }
     }

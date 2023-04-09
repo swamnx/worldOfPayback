@@ -21,5 +21,8 @@ enum UIAppConstants {
         static let gradientUnreleasedPart1 = Color("c_gradient_unreleased_p1")
         static let gradientUnreleasedPart2 = Color("c_graidient_unreleased_p2")
 
+        static let gradientTansactionListPart1 = Color("c_gradient_transaction_list_p1")
+        static let gradientTansactionListPart2 = Color("c_gradient_transaction_list_p2")
+
     }
 }
