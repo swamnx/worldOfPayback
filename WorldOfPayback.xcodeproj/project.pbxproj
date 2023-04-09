@@ -39,6 +39,9 @@
 		288CC70829E0747D00FC5122 /* UnreleasedFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC70729E0747D00FC5122 /* UnreleasedFeatureView.swift */; };
 		288CC70B29E075AD00FC5122 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC70A29E075AD00FC5122 /* Color+Extension.swift */; };
 		288CC70D29E09DC100FC5122 /* StartFakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288CC70C29E09DC100FC5122 /* StartFakeView.swift */; };
+		288F827729E2F3AC0072B015 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288F827629E2F3AB0072B015 /* TransactionView.swift */; };
+		288F827929E2F3C70072B015 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288F827829E2F3C70072B015 /* TransactionViewModel.swift */; };
+		288F827B29E2F3D50072B015 /* TransactionViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288F827A29E2F3D50072B015 /* TransactionViewModelBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +80,9 @@
 		288CC70729E0747D00FC5122 /* UnreleasedFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnreleasedFeatureView.swift; sourceTree = "<group>"; };
 		288CC70A29E075AD00FC5122 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		288CC70C29E09DC100FC5122 /* StartFakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFakeView.swift; sourceTree = "<group>"; };
+		288F827629E2F3AB0072B015 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		288F827829E2F3C70072B015 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		288F827A29E2F3D50072B015 /* TransactionViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModelBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		28534EF229E19F5F001FDC37 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				288F827529E2F3880072B015 /* TransactionScreen */,
 				28534EF529E1A0E1001FDC37 /* TransactionsScreen */,
 			);
 			path = Screens;
@@ -306,6 +313,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		288F827529E2F3880072B015 /* TransactionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				288F827629E2F3AB0072B015 /* TransactionView.swift */,
+				288F827829E2F3C70072B015 /* TransactionViewModel.swift */,
+				288F827A29E2F3D50072B015 /* TransactionViewModelBuilder.swift */,
+			);
+			path = TransactionScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -402,9 +419,11 @@
 			files = (
 				28534F1E29E1F73E001FDC37 /* TransactionListViewModelBuilder.swift in Sources */,
 				28534F0329E1AA27001FDC37 /* TransactionsDTO.swift in Sources */,
+				288F827929E2F3C70072B015 /* TransactionViewModel.swift in Sources */,
 				28534F1C29E1F5E6001FDC37 /* TransactionListViewModel.swift in Sources */,
 				288CC70B29E075AD00FC5122 /* Color+Extension.swift in Sources */,
 				288CC70D29E09DC100FC5122 /* StartFakeView.swift in Sources */,
+				288F827729E2F3AC0072B015 /* TransactionView.swift in Sources */,
 				288CC6E829E051F300FC5122 /* MockApiService.swift in Sources */,
 				288CC70829E0747D00FC5122 /* UnreleasedFeatureView.swift in Sources */,
 				28534F0729E1ABDF001FDC37 /* TransactionDetailDTO.swift in Sources */,
@@ -417,6 +436,7 @@
 				28534F1229E1BA40001FDC37 /* DateServiceUtil.swift in Sources */,
 				28534F1729E1C00E001FDC37 /* DatePresentationUtil.swift in Sources */,
 				28534F0F29E1AE04001FDC37 /* ApiError.swift in Sources */,
+				288F827B29E2F3D50072B015 /* TransactionViewModelBuilder.swift in Sources */,
 				28534EFC29E1A4A8001FDC37 /* ViewModel.swift in Sources */,
 				28534F0929E1AC14001FDC37 /* TransactionAliasDTO.swift in Sources */,
 				288CC6FB29E05F7900FC5122 /* UIAppConstants.swift in Sources */,

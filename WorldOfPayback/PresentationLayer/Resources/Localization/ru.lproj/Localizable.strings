@@ -14,3 +14,6 @@
 
 "Unknown Error" = "Что-то пошло не так";
 "Parsing DTO Error" = "Что-то пошло не так";
+"Transaction details" = "Детали транзакции";
+"Partner Name:" = "Имя партнера:";
+"Description:" = "Описание:";

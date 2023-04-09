@@ -20,7 +20,6 @@ struct TopHeaderView: View {
         Text(titleText)
             .font(.largeTitle)
             .foregroundColor(Constants.mainColor)
-            .multilineTextAlignment(.trailing)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(elementPadding)
             .background(.thinMaterial)

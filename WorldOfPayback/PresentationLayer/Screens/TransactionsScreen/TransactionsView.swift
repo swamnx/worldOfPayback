@@ -21,24 +21,33 @@ struct TransactionsView: View {
     @StateObject var viewModel: TransactionsViewModel
 
     var body: some View {
-        ScrollView(.vertical) {
-            VStack {
-                Spacer(minLength: Constants.elementPadding)
-                ForEach(viewModel.filteredTransactions) { transation in
-                    TransactionListView(
-                        viewModel: TransactionListViewModelBuilder.build(model: transation)
+            Group {
+                ScrollView(.vertical) {
+                    VStack {
+                        Spacer(minLength: Constants.elementPadding)
+                        ForEach(viewModel.filteredTransactions) { transation in
+
+                            NavigationLink(
+                                destination: TransactionView(
+                                    viewModel: TransactionViewModelBuilder.build(model: transation)
+                                )
+                            ) {
+                                TransactionListView(
+                                    viewModel: TransactionListViewModelBuilder.build(model: transation)
+                                )
+                            }
+                        }
+                        Spacer(minLength: Constants.elementPadding)
+                    }
+                }
+                .safeAreaInset(edge: .top) {
+                    TopHeaderView(
+                        titleText: titleText,
+                        elementPadding: Constants.titlePadding
                     )
                 }
-                Spacer(minLength: Constants.elementPadding)
             }
-        }
-        .background(Constants.mainBackgroundColor)
-        .safeAreaInset(edge: .top) {
-            TopHeaderView(
-                titleText: titleText,
-                elementPadding: Constants.titlePadding
-            )
-        }
+            .background(Constants.mainBackgroundColor)
         .onAppear {
             Task {
                 await viewModel.loadData()

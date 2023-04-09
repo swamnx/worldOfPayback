@@ -14,3 +14,6 @@
 
 "Unknown Error" = "Something went wrong";
 "Parsing DTO Error" = "Something went wrong";
+"Transaction details" = "Transaction details";
+"Partner Name:" = "Partner Name";
+"Description:" = "Description";
