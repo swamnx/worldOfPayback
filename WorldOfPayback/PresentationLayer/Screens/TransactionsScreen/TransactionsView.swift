@@ -67,7 +67,7 @@ struct TransactionsView: View {
                 }
             }
             .safeAreaInset(edge: .top) {
-                VStack(spacing: 0) {
+                VStack(spacing: 0) { 
                     TopHeaderView(
                         titleText: titleText,
                         elementPadding: Constants.titlePadding

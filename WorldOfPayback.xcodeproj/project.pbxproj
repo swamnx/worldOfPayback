@@ -46,6 +46,7 @@
 		288F827729E2F3AC0072B015 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288F827629E2F3AB0072B015 /* TransactionView.swift */; };
 		288F827929E2F3C70072B015 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288F827829E2F3C70072B015 /* TransactionViewModel.swift */; };
 		288F827B29E2F3D50072B015 /* TransactionViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288F827A29E2F3D50072B015 /* TransactionViewModelBuilder.swift */; };
+		28A38FD229E45506000FAD31 /* TransactionsSumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A38FD129E45506000FAD31 /* TransactionsSumView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		288F827629E2F3AB0072B015 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 		288F827829E2F3C70072B015 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 		288F827A29E2F3D50072B015 /* TransactionViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModelBuilder.swift; sourceTree = "<group>"; };
+		28A38FD129E45506000FAD31 /* TransactionsSumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsSumView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +314,7 @@
 				28534EF329E19FF4001FDC37 /* TopHeaderView.swift */,
 				28534F1829E1C7CF001FDC37 /* RoundedCornersShape.swift */,
 				288BC0C529E32370009F5A39 /* ActivityIndicator.swift */,
+				28A38FD129E45506000FAD31 /* TransactionsSumView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				28534F1429E1BF6A001FDC37 /* TransactionListView.swift in Sources */,
 				28534EF729E1A0F6001FDC37 /* TransactionsView.swift in Sources */,
 				28534F0529E1ABD1001FDC37 /* TransactionDTO.swift in Sources */,
+				28A38FD229E45506000FAD31 /* TransactionsSumView.swift in Sources */,
 				288BC0C829E33C3C009F5A39 /* ViewDidLoadModifier.swift in Sources */,
 				28534F0B29E1AC20001FDC37 /* TransactionValueDTO.swift in Sources */,
 				28534F1229E1BA40001FDC37 /* DateServiceUtil.swift in Sources */,
