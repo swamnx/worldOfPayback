@@ -13,7 +13,6 @@ struct TransactionsView: View {
         static let mainColor = UIAppConstants.AppColors.defaultBasic
         static let mainBackgroundColor = UIAppConstants.AppColors.defaultBackground
         static let mainAdvancedColor = UIAppConstants.AppColors.defaultAdvanced
-        static let titlePadding: CGFloat = 30
         static let elementPadding: CGFloat = 15
         static let defaultErrorButtonText = String(localized: "Close")
         static let iconNoData = UIAppConstants.AppColors.iconNoData
@@ -24,6 +23,7 @@ struct TransactionsView: View {
     let titleText: String
 
     @StateObject var viewModel: TransactionsViewModel
+    @State var isShowingSorting = false
     @EnvironmentObject var networkMonitor: NetworkMonitor
 
     var body: some View {
@@ -34,11 +34,11 @@ struct TransactionsView: View {
 
                         Spacer(minLength: Constants.elementPadding)
 
-                        if viewModel.filteredTransactions.isEmpty && !viewModel.isLoading {
+                        if viewModel.sortedAndFilteredTransactions.isEmpty && !viewModel.isLoading {
                             noDataView()
                         }
 
-                        ForEach(viewModel.filteredTransactions) { transation in
+                        ForEach(viewModel.sortedAndFilteredTransactions) { transation in
 
                             NavigationLink(
                                 destination: TransactionView(
@@ -67,11 +67,39 @@ struct TransactionsView: View {
                 }
             }
             .safeAreaInset(edge: .top) {
-                VStack(spacing: 0) { 
-                    TopHeaderView(
-                        titleText: titleText,
-                        elementPadding: Constants.titlePadding
-                    )
+                VStack(spacing: 0) {
+                    HStack {
+                        Text(titleText)
+                            .font(.largeTitle)
+                            .foregroundColor(Constants.mainColor)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Button {
+                            isShowingSorting = true
+                        } label: {
+                            Image(systemName: "arrow.up.arrow.down")
+                                .resizable()
+                                .scaledToFit()
+                                .foregroundColor(Constants.mainColor)
+                                .frame(width: 30, height: 30)
+
+                        }
+                        .disabled(viewModel.isLoading)
+                        Spacer(minLength: 15)
+                        Button {
+                            print("Filtering")
+                        } label: {
+                            Image(systemName: "list.bullet.circle")
+                                .resizable()
+                                .scaledToFit()
+                                .foregroundColor(Constants.mainColor)
+                                .frame(width: 30, height: 30)
+
+                        }
+                        .disabled(viewModel.isLoading)
+
+                    }
+                    .padding(30)
+                    .background(.thinMaterial)
                     if !networkMonitor.isConnected {
                         noNetworkView()
                     }
@@ -90,6 +118,17 @@ struct TransactionsView: View {
         ) {
             Button(Constants.defaultErrorButtonText) {
                 viewModel.clearErrorMessage()
+            }
+        }
+        .confirmationDialog(
+            "Sorting Options",
+            isPresented: $isShowingSorting,
+            titleVisibility: .visible
+        ) {
+            ForEach(TransactionsSortingType.allCases) { sortingType in
+                Button(sortingType.rawValue) {
+                    viewModel.updateSortingType(type: sortingType)
+                }
             }
         }
     }
