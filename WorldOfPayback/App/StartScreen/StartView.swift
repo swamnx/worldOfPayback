@@ -11,11 +11,12 @@ struct StartView: View {
 
     private enum Constants {
 
+        static let mainColor = UIAppConstants.AppColors.defaultBasic
+
         static let feedItemText = String(localized: "Key: Feed")
         static let transactionsItemText = String(localized: "Key: Transactions")
         static let shoppingItemText = String(localized: "Key: Shopping")
         static let settingsItemText = String(localized: "Key: Settings")
-        static let mainColor = UIAppConstants.AppColors.defaultBasic
 
         static let feetItemSystemIconName = "note"
         static let transactionsItemSystemIconName = "list.bullet.rectangle"

@@ -10,6 +10,7 @@ import SwiftUI
 struct CardViewText: View {
 
     private enum Constants {
+
         static let mainColor = UIAppConstants.AppColors.defaultBasic
         static let mainBackgroundColor = UIAppConstants.AppColors.defaultBackground.opacity(0.75)
         static let cardBorderWidth: CGFloat = 10

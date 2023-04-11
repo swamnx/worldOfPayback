@@ -10,6 +10,7 @@ import SwiftUI
 struct TransactionCardView: View {
 
     private enum Constants {
+        
         static let mainColor = UIAppConstants.AppColors.defaultBasic
         static let mainAccentColor = UIAppConstants.AppColors.defaultAccent.opacity(0.75)
         static let mainAdvancedColor = UIAppConstants.AppColors.defaultAdvanced

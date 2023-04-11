@@ -10,6 +10,7 @@ import SwiftUI
 struct UnreleasedFeatureView: View {
 
     private enum Constants {
+
         static let mainColor = UIAppConstants.AppColors.defaultBasic
 
         static let gradientColorPart1 = UIAppConstants.AppColors.gradientUnreleasedPart1

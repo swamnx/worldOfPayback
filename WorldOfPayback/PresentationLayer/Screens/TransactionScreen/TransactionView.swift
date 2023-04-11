@@ -10,6 +10,7 @@ import SwiftUI
 struct TransactionView: View {
 
     private enum Constants {
+        
         static let mainColor = UIAppConstants.AppColors.defaultBasic
         static let mainBackgroundColor = UIAppConstants.AppColors.defaultBackground
         static let defaultYellow = UIAppConstants.AppColors.defaultYellow

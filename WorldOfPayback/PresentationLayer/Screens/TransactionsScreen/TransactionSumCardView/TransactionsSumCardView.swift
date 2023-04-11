@@ -10,6 +10,7 @@ import SwiftUI
 struct TransactionsSumCardView: View {
 
     private enum Constants {
+        
         static let mainAdvancedColor = UIAppConstants.AppColors.defaultAdvanced
         static let gradientColorPart1 = UIAppConstants.AppColors.gradientTansactionListPart1
         static let gradientColorPart2 = UIAppConstants.AppColors.gradientTansactionListPart2

@@ -193,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				28534F1629E1C00E001FDC37 /* DatePresentationUtil.swift */,
-				288BC0C729E33C3C009F5A39 /* ViewDidLoadModifier.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -249,6 +248,7 @@
 		288CC6E029E050D200FC5122 /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				28534F1029E1BA14001FDC37 /* Utils */,
 				288CC6E129E050E500FC5122 /* Services */,
 			);
 			path = ApplicationLayer;
@@ -257,7 +257,6 @@
 		288CC6E129E050E500FC5122 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				28534F1029E1BA14001FDC37 /* Utils */,
 				288CC6E429E0510100FC5122 /* ApiService */,
 			);
 			path = Services;
@@ -337,6 +336,7 @@
 		288CC70929E0758400FC5122 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				288BC0C729E33C3C009F5A39 /* ViewDidLoadModifier.swift */,
 				288CC70A29E075AD00FC5122 /* Color+Extension.swift */,
 				288BC0C929E33C5F009F5A39 /* View+Extension.swift */,
 			);

@@ -10,6 +10,7 @@ import SwiftUI
 struct StartFakeView: View {
 
     private enum Constants {
+
         static let mainBackgroundColor = UIAppConstants.AppColors.defaultBackground
         static let elementPadding: CGFloat = 15
     }
@@ -18,7 +19,7 @@ struct StartFakeView: View {
 
     var body: some View {
         ScrollView(.vertical) {
-            VStack {
+            VStack(spacing: 0) {
                 Spacer(minLength: Constants.elementPadding)
                 UnreleasedFeatureView()
                 Spacer(minLength: Constants.elementPadding)

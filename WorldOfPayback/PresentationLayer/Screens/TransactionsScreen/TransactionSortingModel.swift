@@ -21,7 +21,7 @@ enum TransactionSortingType: String, CaseIterable, Identifiable {
     }
 
     func getSortingFunction() -> TransactionSortingFunction {
-        let sortingFunction: TransactionSortingFunction = { (lhs, rhs) in
+        let sortingFunction: TransactionSortingFunction = { lhs, rhs in
             switch self {
             case .byDateUp:
                 return  lhs.date < rhs.date

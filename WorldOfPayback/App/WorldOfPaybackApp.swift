@@ -11,6 +11,7 @@ import SwiftUI
 struct WorldOfPaybackApp: App {
 
     private enum Constants {
+        
         static let mainColor = UIAppConstants.AppColors.defaultBasic
         static let mainBackgroundColor = UIAppConstants.AppColors.defaultBackground
         static let tabItemUnselectedColor = UIAppConstants.AppColors.defaultBasic

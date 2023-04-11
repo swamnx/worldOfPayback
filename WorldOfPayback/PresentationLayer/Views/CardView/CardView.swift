@@ -10,6 +10,7 @@ import SwiftUI
 struct CardView: View {
 
     private enum Constants {
+
         static let mainShadowColor = UIAppConstants.AppColors.defaultShadow
         static let cardShadowRadius: CGFloat = 5
         static let cardBorderWidth: CGFloat = 10

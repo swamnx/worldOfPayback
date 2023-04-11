@@ -10,6 +10,7 @@ import SwiftUI
 struct TransactionsView: View {
 
     private enum Constants {
+
         static let mainColor = UIAppConstants.AppColors.defaultBasic
         static let mainBackgroundColor = UIAppConstants.AppColors.defaultBackground
         static let mainAdvancedColor = UIAppConstants.AppColors.defaultAdvanced
@@ -34,11 +35,13 @@ struct TransactionsView: View {
 
                         Spacer(minLength: Constants.elementPadding)
 
-                        if viewModel.sortedAndFilteredTransactions.isEmpty && !viewModel.isLoading {
+                        if viewModel.sortedAndFilteredTransactions.isEmpty &&
+                            !viewModel.isLoading {
                             noDataView()
                         }
 
-                        if !viewModel.filter.selectedCategories.isEmpty && !viewModel.sortedAndFilteredTransactions.isEmpty {
+                        if !viewModel.filter.selectedCategories.isEmpty &&
+                            !viewModel.sortedAndFilteredTransactions.isEmpty {
                             TransactionsSumCardView(sum: viewModel.transactionsSum)
                         }
 

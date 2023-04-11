@@ -10,6 +10,7 @@ import SwiftUI
 struct TransactionFilterView: View {
 
     private enum Constants {
+        
         static let mainBackgroundColor = UIAppConstants.AppColors.defaultBackground
         static let mainAdvancedColor = UIAppConstants.AppColors.defaultAdvanced
         static let mainColor = UIAppConstants.AppColors.defaultBasic
