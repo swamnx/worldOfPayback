@@ -23,8 +23,6 @@ struct TransactionsView: View {
     let titleText: String
 
     @StateObject var viewModel: TransactionsViewModel
-    @State var isShowingSorting = false
-    @State var isShowingFilter: Bool = false
     @EnvironmentObject var networkMonitor: NetworkMonitor
 
     var body: some View {
@@ -43,15 +41,15 @@ struct TransactionsView: View {
                             TransactionsSumCardView(sum: viewModel.transactionsSum)
                         }
 
-                        ForEach(viewModel.sortedAndFilteredTransactions) { transation in
+                        ForEach(viewModel.sortedAndFilteredTransactions) { transaction in
 
                             NavigationLink(
                                 destination: TransactionView(
-                                    viewModel: TransactionViewModelBuilder.build(model: transation)
+                                    viewModel: TransactionViewModelBuilder.build(model: transaction)
                                 )
                             ) {
                                 TransactionCardView(
-                                    viewModel: TransactionCardViewModelBuilder.build(model: transation)
+                                    viewModel: TransactionCardViewModelBuilder.build(model: transaction)
                                 )
                             }
                         }
@@ -73,38 +71,8 @@ struct TransactionsView: View {
             }
             .safeAreaInset(edge: .top) {
                 VStack(spacing: 0) {
-                    HStack {
-                        Text(titleText)
-                            .font(.largeTitle)
-                            .foregroundColor(Constants.mainColor)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        Button {
-                            isShowingSorting = true
-                        } label: {
-                            Image(systemName: "arrow.up.arrow.down")
-                                .resizable()
-                                .scaledToFit()
-                                .foregroundColor(Constants.mainColor)
-                                .frame(width: 30, height: 30)
+                    headerView()
 
-                        }
-                        .disabled(viewModel.isLoading)
-                        Spacer(minLength: 15)
-                        Button {
-                            isShowingFilter = true
-                        } label: {
-                            Image(systemName: "list.bullet.circle")
-                                .resizable()
-                                .scaledToFit()
-                                .foregroundColor(Constants.mainColor)
-                                .frame(width: 30, height: 30)
-
-                        }
-                        .disabled(viewModel.isLoading)
-
-                    }
-                    .padding(30)
-                    .background(.thinMaterial)
                     if !networkMonitor.isConnected {
                         noNetworkView()
                     }
@@ -127,24 +95,59 @@ struct TransactionsView: View {
         }
         .confirmationDialog(
             "Sorting Options",
-            isPresented: $isShowingSorting,
+            isPresented: $viewModel.isShowingSorting,
             titleVisibility: .visible
         ) {
             ForEach(TransactionSortingType.allCases) { sorting in
                 Button(sorting.rawValue) {
-                    viewModel.updateSorting(sorting: sorting)
+                    viewModel.sorting = sorting
                 }
             }
         }
-        .sheet(isPresented: $isShowingFilter) {
+        .sheet(isPresented: $viewModel.isShowingFilter) {
             TransactionFilterView(
                 viewModel:
                     TransactionFilterViewModelBuilder.build(
                         parentTransactionFilter: $viewModel.filter,
-                        isShowing: $isShowingFilter
+                        isShowing: $viewModel.isShowingFilter
                     )
             )
         }
+    }
+
+    func headerView() -> some View {
+        HStack {
+            Text(titleText)
+                .font(.largeTitle)
+                .foregroundColor(Constants.mainColor)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Button {
+                viewModel.isShowingSorting = true
+            } label: {
+                Image(systemName: "arrow.up.arrow.down")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundColor(Constants.mainColor)
+                    .frame(width: 30, height: 30)
+
+            }
+            .disabled(viewModel.isLoading)
+            Spacer(minLength: 15)
+            Button {
+                viewModel.isShowingFilter = true
+            } label: {
+                Image(systemName: "list.bullet.circle")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundColor(Constants.mainColor)
+                    .frame(width: 30, height: 30)
+
+            }
+            .disabled(viewModel.isLoading)
+
+        }
+        .padding(30)
+        .background(.thinMaterial)
     }
 
     func noDataView() -> some View {

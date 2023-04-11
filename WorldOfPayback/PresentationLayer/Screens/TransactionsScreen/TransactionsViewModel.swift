@@ -16,8 +16,10 @@ class TransactionsViewModel: ViewModel {
     @Published private (set) var sortedAndFilteredTransactions: [TransactionModel] = []
 
     @Published private (set) var isLoading = true
+    @Published var isShowingSorting = false
+    @Published var isShowingFilter = false
 
-    @Published private (set) var sorting: TransactionSortingType
+    @Published var sorting: TransactionSortingType
     @Published var filter: TransactionFilter
     @Published var transactionsSum: Int
 
@@ -73,10 +75,6 @@ class TransactionsViewModel: ViewModel {
         case let.failure(error):
             self.errorMessage = error.localizedDescription
         }
-    }
-
-    func updateSorting(sorting: TransactionSortingType) {
-        self.sorting = sorting
     }
 
 }
