@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class TransactionListViewModel: ViewModel {
+final class TransactionCardViewModel: ViewModel {
 
     let id: String
     

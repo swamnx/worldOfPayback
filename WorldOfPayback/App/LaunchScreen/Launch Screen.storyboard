@@ -59,7 +59,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="circle.fill" catalog="system" width="128" height="123"/>
+        <image name="circle.fill" catalog="system" width="32" height="32"/>
         <image name="i_launch" width="540" height="540"/>
         <namedColor name="c_default_background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

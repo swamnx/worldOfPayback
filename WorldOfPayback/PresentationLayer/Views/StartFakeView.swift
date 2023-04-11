@@ -10,11 +10,7 @@ import SwiftUI
 struct StartFakeView: View {
 
     private enum Constants {
-        static let mainColor = UIAppConstants.AppColors.defaultBasic
         static let mainBackgroundColor = UIAppConstants.AppColors.defaultBackground
-        static let mainAccentColor = UIAppConstants.AppColors.defaultAccent
-        static let mainShadowColor = UIAppConstants.AppColors.defaultShadow
-        static let titlePadding: CGFloat = 30
         static let elementPadding: CGFloat = 15
     }
 
@@ -31,8 +27,7 @@ struct StartFakeView: View {
         .background(Constants.mainBackgroundColor)
         .safeAreaInset(edge: .top) {
             TopHeaderView(
-                titleText: titleText,
-                elementPadding: Constants.titlePadding
+                titleText: titleText
             )
         }
     }

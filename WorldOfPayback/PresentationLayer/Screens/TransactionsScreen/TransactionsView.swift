@@ -40,7 +40,7 @@ struct TransactionsView: View {
                         }
 
                         if !viewModel.filter.selectedCategories.isEmpty && !viewModel.sortedAndFilteredTransactions.isEmpty {
-                            TransactionsSumView(sum: viewModel.transactionsSum)
+                            TransactionsSumCardView(sum: viewModel.transactionsSum)
                         }
 
                         ForEach(viewModel.sortedAndFilteredTransactions) { transation in
@@ -50,8 +50,8 @@ struct TransactionsView: View {
                                     viewModel: TransactionViewModelBuilder.build(model: transation)
                                 )
                             ) {
-                                TransactionListView(
-                                    viewModel: TransactionListViewModelBuilder.build(model: transation)
+                                TransactionCardView(
+                                    viewModel: TransactionCardViewModelBuilder.build(model: transation)
                                 )
                             }
                         }

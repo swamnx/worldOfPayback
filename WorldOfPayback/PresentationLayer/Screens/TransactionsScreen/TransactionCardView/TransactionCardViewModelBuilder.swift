@@ -8,10 +8,10 @@
 import SwiftUI
 
 @MainActor
-struct TransactionListViewModelBuilder {
+struct TransactionCardViewModelBuilder {
 
-    static func build(model: TransactionModel) -> TransactionListViewModel {
-        let transactionListViewModel = TransactionListViewModel(
+    static func build(model: TransactionModel) -> TransactionCardViewModel {
+        let transactionCardViewModel = TransactionCardViewModel(
             id: model.id,
             partnerText: model.partner,
             currencyText: model.value.currency,
@@ -19,11 +19,11 @@ struct TransactionListViewModelBuilder {
             transactionText: model.description,
             date: model.date
         )
-        return transactionListViewModel
+        return transactionCardViewModel
     }
 
-    static func buildMock() -> TransactionListViewModel {
-        let transactionListViewModel = TransactionListViewModel(
+    static func buildMock() -> TransactionCardViewModel {
+        let transactionCardViewModel = TransactionCardViewModel(
             id: "3242",
             partnerText: "Some Partner Group",
             currencyText: "USD",
@@ -31,7 +31,7 @@ struct TransactionListViewModelBuilder {
             transactionText: "Some description about transaction",
             date: .init()
         )
-        return transactionListViewModel
+        return transactionCardViewModel
 
     }
 }

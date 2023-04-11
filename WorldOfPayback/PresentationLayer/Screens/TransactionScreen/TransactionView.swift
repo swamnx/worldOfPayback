@@ -12,14 +12,19 @@ struct TransactionView: View {
     private enum Constants {
         static let mainColor = UIAppConstants.AppColors.defaultBasic
         static let mainBackgroundColor = UIAppConstants.AppColors.defaultBackground
-        static let mainShadowColor = UIAppConstants.AppColors.defaultShadow
         static let defaultYellow = UIAppConstants.AppColors.defaultYellow
         static let defaultCyan = UIAppConstants.AppColors.defaultCyan
-        static let titlePadding: CGFloat = 50
+
         static let elementPadding: CGFloat = 30
-        static let shadowRadius: CGFloat = 10
+        static let cardPadding: CGFloat = 15
+
+        static let cardHeight: CGFloat = 200
+
         static let gradientColorPart1 = UIAppConstants.AppColors.gradientTansactionPart1
         static let gradientColorPart2 = UIAppConstants.AppColors.gradientTansactionPart2
+
+        static let textHeight: CGFloat = 120
+
         static let titleText = String(localized: "Transaction details")
         static let partnerText = String(localized: "Partner Name:")
         static let descriptionText = String(localized: "Description:")
@@ -28,53 +33,51 @@ struct TransactionView: View {
     @StateObject var viewModel: TransactionViewModel
 
     var body: some View {
-        GeometryReader { reader in
-            VStack {
-                Text(Constants.titleText)
-                    .font(.largeTitle)
-                    .bold()
-                    .foregroundColor(Constants.mainColor)
-                    .frame(
-                        maxWidth: reader.size.width,
-                        maxHeight: reader.size.height / 4
-                    )
-                    .background(
-                        LinearGradient(
-                            gradient:
-                                Gradient(
-                                    colors: [
-                                        Constants.gradientColorPart1,
-                                        Constants.gradientColorPart2
-                                    ]
-                                ),
-                            startPoint: .topLeading,
-                            endPoint: .bottom
-                        )
-                    )
-                    .clipShape(
-                        RoundedRectangle(cornerRadius: reader.size.height / 16)
-                    )
-                    .padding(.top, Constants.titlePadding)
-                    .padding([.leading, .trailing], Constants.elementPadding)
-                    .shadow(color: Constants.mainShadowColor, radius: Constants.shadowRadius)
+        VStack(spacing: 0) {
 
+            headerView()
+
+            detailView(
+                category: Constants.partnerText,
+                text: viewModel.titleText,
+                color: Constants.defaultYellow
+            )
+
+            if let descriptionText = viewModel.descriptionText {
                 detailView(
-                    category: Constants.partnerText,
-                    text: viewModel.titleText,
-                    color: Constants.defaultYellow
+                    category: Constants.descriptionText,
+                    text: descriptionText,
+                    color: Constants.defaultCyan
                 )
-
-                if let descriptionText = viewModel.descriptionText {
-                    detailView(
-                        category: Constants.descriptionText,
-                        text: descriptionText,
-                        color: Constants.defaultCyan
-                    )
-                }
-
             }
+
+            Spacer()
+
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Constants.mainBackgroundColor)
+    }
+
+    func headerView() -> some View {
+        ZStack {
+            CardView(
+                cardBorderColor: Constants.mainColor,
+                gradientColorPart1: Constants.gradientColorPart1,
+                gradientColorPart2: Constants.gradientColorPart2
+            )
+            CardViewText(
+                text: Constants.titleText,
+                textBorderColor: Constants.mainColor
+            )
+            .frame(maxWidth: .infinity, maxHeight: Constants.textHeight)
+            .padding(Constants.elementPadding)
+        }
+        .frame(
+            maxWidth: .infinity,
+            minHeight: Constants.cardHeight,
+            maxHeight: Constants.cardHeight
+        )
+        .padding(Constants.cardPadding)
     }
 
     func detailView(category: String, text: String, color: Color) -> some View {
