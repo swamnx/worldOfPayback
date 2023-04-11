@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-//This view is not mine, i took it from StackOverflow
+// This view is not mine, i took it from StackOverflow
 
 struct ActivityIndicator: View {
 
