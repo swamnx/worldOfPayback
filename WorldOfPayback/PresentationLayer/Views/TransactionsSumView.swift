@@ -39,6 +39,7 @@ struct TransactionsSumView: View {
         }
         .frame(
             maxWidth: Constants.cardSize.width,
+            minHeight: Constants.cardSize.height,
             maxHeight: Constants.cardSize.height
         )
         .padding(Constants.cardPadding)

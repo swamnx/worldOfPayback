@@ -17,7 +17,9 @@ class TransactionsViewModel: ViewModel {
 
     @Published private (set) var isLoading = true
 
-    @Published private (set) var sortingType: TransactionsSortingType
+    @Published private (set) var sorting: TransactionSortingType
+    @Published var filter: TransactionFilter
+    @Published var transactionsSum: Int
 
     private let apiService: ApiService
     private var cancellables = Set<AnyCancellable>()
@@ -26,24 +28,36 @@ class TransactionsViewModel: ViewModel {
         apiService: ApiService
     ) {
         self.apiService = apiService
-        self.sortingType = .byDateUp
+        self.sorting = .byDateUp
+        self.filter = .init()
+        self.transactionsSum = 0
         super.init()
         addSubscribers()
     }
 
     func addSubscribers() {
         $transactions
-            .combineLatest($sortingType)
-            .sink { [weak self] newTransactions, newSortingType in
+            .combineLatest($sorting)
+            .sink { [weak self] newTransactions, newSorting in
                 guard let self else { return }
-                self.sortedTransactions = newTransactions
-                    .sorted(by: TransactionsSorterFunctions.getSortingFunctionBySortingType(type: newSortingType))
+                let sortingFunction = newSorting.getSortingFunction()
+                self.sortedTransactions = newTransactions.sorted(by: sortingFunction)
             }
             .store(in: &cancellables)
         $sortedTransactions
-            .sink { [weak self] newSortedTransactions in
+            .combineLatest($filter)
+            .sink { [weak self] newSortedTransactions, newFilter in
                 guard let self else { return }
-                self.sortedAndFilteredTransactions = newSortedTransactions
+                var sortedAndFilteredTransactions = newSortedTransactions
+                if !newFilter.selectedCategories.isEmpty {
+                    sortedAndFilteredTransactions = sortedAndFilteredTransactions.filter {
+                        newFilter.isContainCategory(category: $0.category)
+                    }
+                }
+                self.transactionsSum = sortedAndFilteredTransactions.reduce(into: 0) {
+                    $0 += $1.value.amount
+                }
+                self.sortedAndFilteredTransactions = sortedAndFilteredTransactions
             }
             .store(in: &cancellables)
     }
@@ -61,38 +75,8 @@ class TransactionsViewModel: ViewModel {
         }
     }
 
-    func updateSortingType(type: TransactionsSortingType) {
-        self.sortingType = type
+    func updateSorting(sorting: TransactionSortingType) {
+        self.sorting = sorting
     }
 
-}
-
-typealias TransactionsSorterFunction = (TransactionModel, TransactionModel) -> Bool
-
-enum TransactionsSortingType: String, CaseIterable, Identifiable {
-
-    case byDateUp = "By date ↑"
-    case byDateDown = "By date ↓"
-
-    var id: String { return self.rawValue }
-}
-
-struct TransactionsSorterFunctions {
-
-    static func getSortingFunctionBySortingType(type: TransactionsSortingType) -> TransactionsSorterFunction {
-        switch type {
-        case .byDateUp:
-            return Self.sortByDateUp(lhs:rhs:)
-        case .byDateDown:
-            return Self.sortByDateDown(lhs:rhs:)
-        }
-    }
-
-    private static func sortByDateUp(lhs: TransactionModel, rhs: TransactionModel) -> Bool {
-        lhs.date < rhs.date
-    }
-
-    private static func sortByDateDown(lhs: TransactionModel, rhs: TransactionModel) -> Bool {
-        lhs.date > rhs.date
-    }
 }

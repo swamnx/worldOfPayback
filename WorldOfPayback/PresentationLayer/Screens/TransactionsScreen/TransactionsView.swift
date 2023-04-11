@@ -24,6 +24,7 @@ struct TransactionsView: View {
 
     @StateObject var viewModel: TransactionsViewModel
     @State var isShowingSorting = false
+    @State var isShowingFilter: Bool = false
     @EnvironmentObject var networkMonitor: NetworkMonitor
 
     var body: some View {
@@ -36,6 +37,10 @@ struct TransactionsView: View {
 
                         if viewModel.sortedAndFilteredTransactions.isEmpty && !viewModel.isLoading {
                             noDataView()
+                        }
+
+                        if !viewModel.filter.selectedCategories.isEmpty && !viewModel.sortedAndFilteredTransactions.isEmpty {
+                            TransactionsSumView(sum: viewModel.transactionsSum)
                         }
 
                         ForEach(viewModel.sortedAndFilteredTransactions) { transation in
@@ -86,7 +91,7 @@ struct TransactionsView: View {
                         .disabled(viewModel.isLoading)
                         Spacer(minLength: 15)
                         Button {
-                            print("Filtering")
+                            isShowingFilter = true
                         } label: {
                             Image(systemName: "list.bullet.circle")
                                 .resizable()
@@ -125,11 +130,20 @@ struct TransactionsView: View {
             isPresented: $isShowingSorting,
             titleVisibility: .visible
         ) {
-            ForEach(TransactionsSortingType.allCases) { sortingType in
-                Button(sortingType.rawValue) {
-                    viewModel.updateSortingType(type: sortingType)
+            ForEach(TransactionSortingType.allCases) { sorting in
+                Button(sorting.rawValue) {
+                    viewModel.updateSorting(sorting: sorting)
                 }
             }
+        }
+        .sheet(isPresented: $isShowingFilter) {
+            TransactionFilterView(
+                viewModel:
+                    TransactionFilterViewModelBuilder.build(
+                        parentTransactionFilter: $viewModel.filter,
+                        isShowing: $isShowingFilter
+                    )
+            )
         }
     }
 

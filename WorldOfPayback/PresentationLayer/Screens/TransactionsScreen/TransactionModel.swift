@@ -19,6 +19,7 @@ struct TransactionModel: Identifiable {
     let partner: String
     let description: String?
     let date: Date
+    let category: Int
     let value: TransactionValue
 
 }

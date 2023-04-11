@@ -34,6 +34,7 @@ struct MockApiService: ApiService {
                     date: DateServiceUtil.apiDateFormatter.date(
                         from: transactionDTO.transactionDetail.bookingDate
                     )!,
+                    category: transactionDTO.category,
                     value: .init(
                         amount: transactionDTO.transactionDetail.value.amount,
                         currency: transactionDTO.transactionDetail.value.currency
