@@ -17,9 +17,10 @@ struct ViewDidLoadModifier: ViewModifier {
     }
 
     func body(content: Content) -> some View {
-        content.onAppear {
-            if didLoad == false {
-                didLoad = true
+        content
+        .onAppear {
+            if !didLoad {
+                didLoad.toggle()
                 action?()
             }
         }
