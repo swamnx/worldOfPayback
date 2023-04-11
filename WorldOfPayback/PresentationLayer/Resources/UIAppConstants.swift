@@ -30,7 +30,10 @@ enum UIAppConstants {
         static let gradientTansactionPart1 = Color("c_gradient_transaction_p1")
         static let gradientTansactionPart2 = Color("c_gradient_transaction_p2")
 
-        static let iconNoData = String("i_no_data")
+    }
 
+    enum AppIcons {
+
+        static let iconNoData = String("i_no_data")
     }
 }

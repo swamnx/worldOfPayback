@@ -15,7 +15,7 @@ struct TransactionsView: View {
         static let mainAdvancedColor = UIAppConstants.AppColors.defaultAdvanced
         static let elementPadding: CGFloat = 15
         static let defaultErrorButtonText = String(localized: "Close")
-        static let iconNoData = UIAppConstants.AppColors.iconNoData
+        static let iconNoData = UIAppConstants.AppIcons.iconNoData
         static let noDataText = String(localized: "No data")
         static let noNetworkText = String(localized: "No network")
     }
