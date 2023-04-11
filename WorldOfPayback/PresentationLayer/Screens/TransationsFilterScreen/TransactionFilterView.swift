@@ -12,13 +12,16 @@ struct TransactionFilterView: View {
     private enum Constants {
         static let mainBackgroundColor = UIAppConstants.AppColors.defaultBackground
         static let mainAdvancedColor = UIAppConstants.AppColors.defaultAdvanced
-        static let mainAccentColor = UIAppConstants.AppColors.defaultAccent
         static let mainColor = UIAppConstants.AppColors.defaultBasic
         static let mainShadowColor = UIAppConstants.AppColors.defaultShadow
 
         static let titleText = String("Filter")
         static let categoryTitleText = String("Category")
         static let elementPadding: CGFloat = 30
+
+        static let controlButtonSize: CGSize = .init(width: 150, height: 50)
+        static let controlButtonCornerRadius: CGFloat = 15
+        static let controlButtonShadowRadius: CGFloat = 5
     }
 
     @StateObject var viewModel: TransactionFilterViewModel
@@ -37,14 +40,19 @@ struct TransactionFilterView: View {
                             get: { category.isSelected },
                             set: { newValue in
                                 viewModel.allCategories.remove(category)
-                                viewModel.allCategories.insert(.init(category: category.category, isSelected: newValue))
+                                viewModel.allCategories.insert(
+                                    .init(
+                                        category: category.category,
+                                        isSelected: newValue
+                                    )
+                                )
                             }
                         )
                     )
                     .foregroundColor(Constants.mainColor)
+                    .tint(Constants.mainAdvancedColor)
                 }
             }
-            .padding(.top, 15)
 
             Spacer()
 
@@ -54,17 +62,6 @@ struct TransactionFilterView: View {
         .padding(Constants.elementPadding)
         .background(Constants.mainBackgroundColor)
         .interactiveDismissDisabled()
-    }
-
-    func controlButtonView(text: String, action: @escaping () -> Void) -> some View {
-        Button(text) {
-           action()
-        }
-        .frame(width: 150, height: 50)
-        .background(Constants.mainAccentColor)
-        .foregroundColor(Constants.mainColor)
-        .clipShape(RoundedRectangle(cornerRadius: 15))
-        .shadow(color: Constants.mainShadowColor, radius: 5)
     }
 
     func headerView() -> some View {
@@ -81,7 +78,7 @@ struct TransactionFilterView: View {
             .bold()
             .foregroundColor(Constants.mainColor)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.top, 15)
+            .padding([.top, .bottom], Constants.elementPadding)
     }
 
     func footerView() -> some View {
@@ -96,13 +93,35 @@ struct TransactionFilterView: View {
                 viewModel.resetFilter()
             }
         }
-        .frame(maxWidth: .infinity, alignment: .center)
+    }
+
+    func controlButtonView(text: String, action: @escaping () -> Void) -> some View {
+        Button(text) {
+           action()
+        }
+        .frame(
+            width: Constants.controlButtonSize.width,
+            height: Constants.controlButtonSize.height
+        )
+        .background(Constants.mainAdvancedColor)
+        .foregroundColor(Constants.mainColor)
+        .clipShape(
+            RoundedRectangle(
+                cornerRadius: Constants.controlButtonCornerRadius
+            )
+        )
+        .shadow(
+            color: Constants.mainShadowColor,
+            radius: Constants.controlButtonShadowRadius
+        )
     }
 }
 
 struct TransactionFilterView_Previews: PreviewProvider {
 
     static var previews: some View {
-        TransactionFilterView(viewModel: TransactionFilterViewModelBuilder.buildMock())
+        TransactionFilterView(
+            viewModel: TransactionFilterViewModelBuilder.buildMock()
+        )
     }
 }
