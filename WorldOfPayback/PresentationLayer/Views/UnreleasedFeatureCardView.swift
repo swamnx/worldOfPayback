@@ -20,7 +20,7 @@ struct UnreleasedFeatureView: View {
 
         static let textPadding: CGFloat = 30
         static let textHeight: CGFloat = 120
-        static let text = String(localized: "UnreleasedFeatureText")
+        static let text = String(localized: "Key: Unreleased Feature Text")
 
         static let systemIconName = "exclamationmark.triangle"
         static let iconSize: CGSize = .init(width: 120, height: 120)

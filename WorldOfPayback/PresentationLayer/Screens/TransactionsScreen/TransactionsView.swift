@@ -14,10 +14,11 @@ struct TransactionsView: View {
         static let mainBackgroundColor = UIAppConstants.AppColors.defaultBackground
         static let mainAdvancedColor = UIAppConstants.AppColors.defaultAdvanced
         static let elementPadding: CGFloat = 15
-        static let defaultErrorButtonText = String(localized: "Close")
         static let iconNoData = UIAppConstants.AppIcons.iconNoData
-        static let noDataText = String(localized: "No data")
-        static let noNetworkText = String(localized: "No network")
+        static let defaultErrorButtonText = String(localized: "Key: Close")
+        static let noDataText = String(localized: "Key: No data")
+        static let noNetworkText = String(localized: "Key: No network")
+        static let sortingText = String(localized: "Key: Sorting options")
     }
 
     let titleText: String
@@ -94,12 +95,12 @@ struct TransactionsView: View {
             }
         }
         .confirmationDialog(
-            "Sorting Options",
+            Constants.sortingText,
             isPresented: $viewModel.isShowingSorting,
             titleVisibility: .visible
         ) {
             ForEach(TransactionSortingType.allCases) { sorting in
-                Button(sorting.rawValue) {
+                Button(sorting.getRawValueWithLocalization()) {
                     viewModel.sorting = sorting
                 }
             }
@@ -180,15 +181,10 @@ struct TransactionsView: View {
 
 struct TransactionsView_Previews: PreviewProvider {
 
-    private enum Constants {
-
-        static let transactionsHeaderText = String(localized: "TransactionsHeadText")
-    }
-
     static var previews: some View {
 
         TransactionsView(
-            titleText: Constants.transactionsHeaderText,
+            titleText: "Transactions",
             viewModel: TransactionsViewModelBuilder.buildMock()
         )
         .environmentObject(NetworkMonitor())

@@ -6,20 +6,28 @@
   
 */
 
-"FeedHeadText" = "Лента";
-"TransactionsHeadText" = "Транзакции";
-"ShoppingHeadText" = "Покупки";
-"SettingsHeadText" = "Настройки";
-"UnreleasedFeatureText" = "Извините, данный функционал не был разработан";
-
-"Unknown Error" = "Что-то пошло не так";
-"Parsing DTO Error" = "Что-то пошло не так";
-"Mock Error" = "Ошибка мока";
-
-"Transaction details" = "Детали транзакции";
-"Partner Name:" = "Имя партнера:";
-"Description:" = "Описание:";
-"Close" = "Закрыть";
-"No data" = "Нет данных";
-"No network" = "Нет Интернета";
-"Transactions sum:" = "Сумма транзакций:";
+"Key: Filter" = "Фильтр";
+"Key: Category" = "Категория";
+"Key: Apply" = "Применить";
+"Key: Reset" = "Сбросить";
+"Key: Transaction details" = "Детали транзакции";
+"Key: Partner Name" = "Название партнера:";
+"Key: Description" = "Описание:";
+"Key: Transactions sum" = "Сумма транзакции: ";
+"Key: Close" = "Закрыть";
+"Key: No data" = "Нет данных";
+"Key: No network" = "Нет доступа в интернет";
+"Key: Sorting options" = "Варианты сортировки";
+"Key: By date ↑" = "По дате ↑";
+"Key: By date ↓" = "По дате ↓";
+"Key: Category 1" = "Категория 1";
+"Key: Category 2" = "Категория 2";
+"Key: Category 3" = "Категория 3";
+"Key: Unreleased Feature Text" = "Простите, данный функционал не был реализован";
+"Key: Api Error Unknown" = "Неизвестная ошибка апи";
+"Key: Api Error Parsing DTO" = "Ошибка парсинга апи";
+"Key: Api Mock Error" = "Ошибка мока апи";
+"Key: Feed" = "Лента";
+"Key: Transactions" = "Транзакции";
+"Key: Shopping" = "Покупки";
+"Key: Settings" = "Настройки";

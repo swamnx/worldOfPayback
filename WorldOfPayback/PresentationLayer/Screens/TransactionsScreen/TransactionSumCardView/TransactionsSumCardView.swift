@@ -20,7 +20,7 @@ struct TransactionsSumCardView: View {
         static let cardHeight: CGFloat = 150
 
         static let textHeight: CGFloat = 120
-        static let titleText = String(localized: "Transactions sum: ")
+        static let titleText = String(localized: "Key: Transactions sum")
 
     }
     

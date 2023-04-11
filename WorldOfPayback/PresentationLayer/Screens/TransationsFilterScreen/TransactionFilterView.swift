@@ -15,13 +15,16 @@ struct TransactionFilterView: View {
         static let mainColor = UIAppConstants.AppColors.defaultBasic
         static let mainShadowColor = UIAppConstants.AppColors.defaultShadow
 
-        static let titleText = String("Filter")
-        static let categoryTitleText = String("Category")
+        static let titleText = String(localized: "Key: Filter")
+        static let categoryTitleText = String(localized: "Key: Category")
         static let elementPadding: CGFloat = 30
 
         static let controlButtonSize: CGSize = .init(width: 150, height: 50)
         static let controlButtonCornerRadius: CGFloat = 15
         static let controlButtonShadowRadius: CGFloat = 5
+        static let applyButtonText = String(localized: "Key: Apply")
+        static let resetButtonText = String(localized: "Key: Reset")
+
     }
 
     @StateObject var viewModel: TransactionFilterViewModel
@@ -30,12 +33,12 @@ struct TransactionFilterView: View {
         VStack {
             headerView()
 
-            subHeaderView(text: "Category:")
+            subHeaderView(text: Constants.categoryTitleText)
 
             VStack {
                 ForEach(viewModel.allCategories.sorted(by: <)) { category in
                     Toggle(
-                        category.category.rawValue,
+                        category.category.getRawValueWithLocalization(),
                         isOn: Binding(
                             get: { category.isSelected },
                             set: { newValue in
@@ -83,13 +86,13 @@ struct TransactionFilterView: View {
 
     func footerView() -> some View {
         HStack {
-            controlButtonView(text: "Apply") {
+            controlButtonView(text: Constants.applyButtonText) {
                 viewModel.applyFilter()
             }
 
             Spacer()
 
-            controlButtonView(text: "Reset") {
+            controlButtonView(text: Constants.resetButtonText) {
                 viewModel.resetFilter()
             }
         }

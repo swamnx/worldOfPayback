@@ -19,11 +19,11 @@ extension ApiError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .unknownError:
-            return String(localized: "Unknown Error")
+            return String(localized: "Key: Api Error Unknown")
         case .parsingDTOError:
-            return String(localized: "Parsing DTO Error")
+            return String(localized: "Key: Api Error Parsing DTO")
         case .mockError:
-            return String(localized: "Mock Error")
+            return String(localized: "Key: Api Mock Error")
         }
     }
 }

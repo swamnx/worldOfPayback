@@ -11,10 +11,10 @@ struct StartView: View {
 
     private enum Constants {
 
-        static let feedItemText = String(localized: "FeedHeadText")
-        static let transactionsItemText = String(localized: "TransactionsHeadText")
-        static let shoppingItemText = String(localized: "ShoppingHeadText")
-        static let settingsItemText = String(localized: "SettingsHeadText")
+        static let feedItemText = String(localized: "Key: Feed")
+        static let transactionsItemText = String(localized: "Key: Transactions")
+        static let shoppingItemText = String(localized: "Key: Shopping")
+        static let settingsItemText = String(localized: "Key: Settings")
         static let mainColor = UIAppConstants.AppColors.defaultBasic
 
         static let feetItemSystemIconName = "note"

@@ -11,10 +11,14 @@ typealias TransactionSortingFunction = (TransactionModel, TransactionModel) -> B
 
 enum TransactionSortingType: String, CaseIterable, Identifiable {
 
-    case byDateUp = "By date ↑"
-    case byDateDown = "By date ↓"
+    case byDateUp = "Key: By date ↑"
+    case byDateDown = "Key: By date ↓"
 
     var id: String { return self.rawValue }
+
+    func getRawValueWithLocalization() -> String {
+        String.init(localized: String.LocalizationValue.init(self.rawValue))
+    }
 
     func getSortingFunction() -> TransactionSortingFunction {
         let sortingFunction: TransactionSortingFunction = { (lhs, rhs) in

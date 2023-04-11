@@ -5,21 +5,28 @@
   Created by swamnx on 7.04.23.
   
 */
-
-"FeedHeadText" = "Feed";
-"TransactionsHeadText" = "Transactions";
-"ShoppingHeadText" = "Shopping";
-"SettingsHeadText" = "Settings";
-"UnreleasedFeatureText" = "Sorry, this feature wasn't released yet";
-
-"Unknown Error" = "Something went wrong";
-"Parsing DTO Error" = "Something went wrong";
-"Mock Error" = "Mock Error";
-
-"Transaction details" = "Transaction details";
-"Partner Name:" = "Partner Name:";
-"Description:" = "Description:";
-"Close" = "Close";
-"No data" = "No data";
-"No network" = "No network";
-"Transactions sum:" = "Transactions sum:";
+"Key: Filter" = "Filter";
+"Key: Category" = "Category";
+"Key: Apply" = "Apply";
+"Key: Reset" = "Reset";
+"Key: Transaction details" = "Transaction details";
+"Key: Partner Name" = "Partner Name:";
+"Key: Description" = "Description:";
+"Key: Transactions sum" = "Transactions sum: ";
+"Key: Close" = "Close";
+"Key: No data" = "No data";
+"Key: No network" = "No network";
+"Key: Sorting options" = "Sorting options";
+"Key: By date ↑" = "By date ↑";
+"Key: By date ↓" = "By date ↓";
+"Key: Category 1" = "Category 1";
+"Key: Category 2" = "Category 2";
+"Key: Category 3" = "Category 3";
+"Key: Unreleased Feature Text" = "Sorry, this feature wasn't implemented yet";
+"Key: Api Error Unknown" = "Unknown Api error";
+"Key: Api Error Parsing DTO" = "Parsing Api error";
+"Key: Api Mock Error" = "Mock Api error";
+"Key: Feed" = "Feed";
+"Key: Transactions" = "Transactions";
+"Key: Shopping" = "Shopping";
+"Key: Settings" = "Settings";

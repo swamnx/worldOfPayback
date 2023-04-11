@@ -25,9 +25,9 @@ struct TransactionView: View {
 
         static let textHeight: CGFloat = 120
 
-        static let titleText = String(localized: "Transaction details")
-        static let partnerText = String(localized: "Partner Name:")
-        static let descriptionText = String(localized: "Description:")
+        static let titleText = String(localized: "Key: Transaction details")
+        static let partnerText = String(localized: "Key: Partner Name")
+        static let descriptionText = String(localized: "Key: Description")
     }
 
     @StateObject var viewModel: TransactionViewModel
